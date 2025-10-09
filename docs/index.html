@@ -1,40 +1,154 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>چارچوب تعالی سازمانی | Excellence Framework</title>
-  <style>
-    body { font-family: sans-serif; line-height: 1.8; padding: 2em; max-width: 800px; margin: auto; }
-    h1, h2 { color: #2c3e50; }
-    a { color: #2980b9; text-decoration: none; }
-    hr { margin: 2em 0; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چارچوب تعالی سازمانی - Excellence Framework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 50px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .persian-section {
+            direction: rtl;
+        }
+
+        .persian-section h1,
+        .persian-section p {
+            text-align: right;
+        }
+
+        .english-section {
+            direction: ltr;
+            background-color: #f8f9fa;
+        }
+
+        .english-section h1,
+        .english-section p {
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .english-section h1 {
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        a {
+            display: block;
+            padding: 15px 25px;
+            background-color: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: #764ba2;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .emoji {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <!-- بخش فارسی -->
+        <div class="section persian-section">
+            <h1><span class="emoji">🌟</span> خوش‌آمدید به چارچوب تعالی سازمانی</h1>
+            <p>
+                این پروژه دو زبانه، اخلاق‌محور و منطبق با استانداردهای EFQM 2025، ISO و SDG طراحی شده است
+                تا سازمان‌ها را در مسیر تحول و تعالی توانمند سازد.
+            </p>
+            <div class="links">
+                <a href="About.html">درباره پروژه</a>
+                <a href="Contact.html">تماس با ما</a>
+                <a href="Feedback-Form.html">داشبورد فرم‌های فارسی</a>
+                <a href="Feedback-Form-EN.html">English Forms Dashboard</a>
+            </div>
+        </div>
 
-  <h1>🌟 خوش‌آمدید به چارچوب تعالی سازمانی</h1>
-  <p>
-    این پروژه دو زبانه، اخلاق‌محور و منطبق با استانداردهای EFQM 2025، ISO و SDG طراحی شده است تا سازمان‌ها را در مسیر تحول و تعالی توانمند سازد.
-  </p>
-  <ul>
-    <li><a href="About.html">درباره پروژه</a></li>
-    <li><a href="Contact.html">تماس با ما</a></li>
-    <li><a href="FORMS-DASHBOARD.html">داشبورد فرم‌های فارسی</a></li>
-    <li><a href="FORMS-DASHBOARD-EN.html">English Forms Dashboard</a></li>
-  </ul>
-
-  <hr>
-
-  <h2>🌟 Welcome to the Excellence Framework</h2>
-  <p>
-    This bilingual, ethically licensed framework empowers organizations through modular tools aligned with EFQM 2025, ISO, and SDG standards.
-  </p>
-  <ul>
-    <li><a href="About.html">About the Project</a></li>
-    <li><a href="Contact.html">Contact</a></li>
-    <li><a href="FORMS-DASHBOARD.html">Persian Forms Dashboard</a></li>
-    <li><a href="FORMS-DASHBOARD-EN.html">English Forms Dashboard</a></li>
-  </ul>
-
+        <!-- English Section -->
+        <div class="section english-section">
+            <h1><span class="emoji">🌟</span> Welcome to the Excellence Framework</h1>
+            <p>
+                This bilingual, ethically licensed framework empowers organizations through modular tools
+                aligned with EFQM 2025, ISO, and SDG standards.
+            </p>
+            <div class="links">
+                <a href="About.html">About the Project</a>
+                <a href="Contact.html">Contact</a>
+                <a href="Feedback-Form.html">Persian Forms Dashboard</a>
+                <a href="Feedback-Form-EN.html">English Forms Dashboard</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
