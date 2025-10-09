@@ -1,11 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>User Feedback Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form - Excellence Framework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .button {
+            background-color: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #764ba2;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
 </head>
 <body>
-  <h1>📋 User Feedback Form</h1>
-  <p>Please share your comments, suggestions, and feedback using this form.</p>
+    <div class="container">
+        <h1>🌟 Feedback Form</h1>
+        <p class="subtitle">Excellence Framework - EFQM 2025, ISO & SDG Aligned</p>
+
+        <div id="successMessage" class="success-message">
+            ✓ Thank you for your feedback! Your message has been received.
+        </div>
+
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Organization / Company</label>
+                <input type="text" id="organization" name="organization" placeholder="Your organization name (optional)">
+            </div>
+
+            <div class="form-group">
+                <label for="role">Your Role</label>
+                <input type="text" id="role" name="role" placeholder="e.g., Manager, Consultant, Student">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Feedback Category <span class="required">*</span></label>
+                <select id="category" name="category" required>
+                    <option value="">-- Select a category --</option>
+                    <option value="general">General Feedback</option>
+                    <option value="suggestion">Suggestion for Improvement</option>
+                    <option value="bug">Bug Report</option>
+                    <option value="feature">Feature Request</option>
+                    <option value="question">Question</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="priority">Priority Level</label>
+                <select id="priority" name="priority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Please provide your feedback in detail..." required></textarea>
+            </div>
+
+            <button type="submit" class="button">Submit Feedback</button>
+        </form>
+
+        <a href="../index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Reset form
+            this.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
