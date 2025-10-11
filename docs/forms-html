@@ -1,13 +1,141 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>فرم بازخورد</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم تماس - نمونه</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <h1>📋 فرم بازخورد کاربران</h1>
-  <p>لطفاً نظرات خود را در این فرم ثبت فرمایید.</p>
+    <div class="form-container">
+        <h1 class="form-title">📧 فرم تماس با ما</h1>
+        
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name" class="form-label">نام کامل</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="نام خود را وارد کنید" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">ایمیل</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject" class="form-label">موضوع</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="موضوع پیام" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label">پیام</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="متن پیام خود را بنویسید..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">ارسال پیام</button>
+        </form>
+
+        <a href="../index.html" class="back-link">← بازگشت به صفحه اصلی</a>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('پیام شما با موفقیت ارسال شد!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
-
-
