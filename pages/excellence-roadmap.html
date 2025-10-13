@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نقشه راه تعالی و مسیر یادگیری حمید اقتداریان">
+    <title>نقشه راه تعالی | حمید اقتداریان</title>
+
+```
+<link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    .roadmap-section {
+        padding: calc(80px + 2rem) 0 4rem;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+
+    .roadmap-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .roadmap-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-bg);
+        margin-bottom: 1rem;
+    }
+
+    .roadmap-header p {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        border-radius: 2px;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+    }
+
+    .timeline-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: 45%;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .timeline-icon {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        z-index: 10;
+    }
+
+    .timeline-date {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark-bg);
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .timeline-content p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+    }
+
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .skill-tag {
+        background: #e0f2fe;
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .stat-card i {
+        font-size: 3rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-bg);
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        color: var(--text-secondary);
+        font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .timeline::before {
+            right: 30px;
+            transform: translateX(0);
+        }
+
+        .timeline-item,
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 80px;
+        }
+
+        .timeline-content {
+            width: 100%;
+        }
+
+        .timeline-icon {
+            right: 30px;
+            transform: translateX(0);
+        }
+
+        .roadmap-header h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>حمید اقتداریان</h1>
+                    </div>
+                    <button class="menu-toggle" id="menuToggle" aria-label="منوی اصلی">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="../index.html" class="nav-link">خانه</a></li>
+                        <li><a href="excellence-roadmap.html" class="nav-link active">نقشه راه تعالی</a></li>
+                        <li><a href="excellence-journey-archive.html" class="nav-link">تجربیات ارزیابی</a></li>
+                        <li><a href="steel.html" class="nav-link">تحلیل بازار فولاد</a></li>
+                        <li><a href="projects.html" class="nav-link">پروژه‌ها</a></li>
+                        <li><a href="tools.html" class="nav-link">ابزارها</a></li>
+                        <li><a href="publications.html" class="nav-link">مقالات</a></li>
+                        <li><a href="data.html" class="nav-link">داده‌ها</a></li>
+                        <li><a href="contact.html" class="nav-link">تماس</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+```
+<!-- Roadmap Section -->
+<section class="roadmap-section">
+    <div class="container">
+        <div class="roadmap-header">
+            <h1>نقشه راه تعالی و حرفه‌ای</h1>
+            <p>مسیر یادگیری و توسعه مهارت‌های من در حوزه‌های مختلف فناوری و برنامه‌نویسی</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2018 - 2022</span>
+                    <h3>کارشناسی مهندسی کامپیوتر</h3>
+                    <h4>دانشگاه صنعتی شریف</h4>
+                    <p>
+                        تحصیل در یکی از برترین دانشگاه‌های کشور با تمرکز بر الگوریتم‌ها، ساختمان داده،
+                        و مبانی علوم کامپیوتر. معدل: 17.5
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">ساختمان داده</span>
+                        <span class="skill-tag">الگوریتم‌ها</span>
+                        <span class="skill-tag">پایگاه داده</span>
+                        <span class="skill-tag">شبکه‌های کامپیوتری</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2020</span>
+                    <h3>شروع توسعه وب حرفه‌ای</h3>
+                    <h4>فریلنسر و پروژه‌های شخصی</h4>
+                    <p>
+                        آغاز کار حرفه‌ای در زمینه توسعه وب با تمرکز بر فناوری‌های مدرن و
+                        طراحی رابط کاربری. ساخت بیش از 20 پروژه موفق.
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2021 - 2023</span>
+                    <h3>توسعه‌دهنده فولستک</h3>
+                    <h4>شرکت فناوری نوآوران دیجیتال</h4>
+                    <p>
+                        کار تمام‌وقت به عنوان توسعه‌دهنده فولستک با مسئولیت طراحی و پیاده‌سازی
+                        سیستم‌های پیچیده وب و موبایل.
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2022 - 2024</span>
+                    <h3>تخصص در تحلیل داده</h3>
+                    <h4>دوره‌های آنلاین و پروژه‌های عملی</h4>
+                    <p>
+                        کسب مهارت در تحلیل داده، یادگیری ماشین و هوش مصنوعی. پیاده‌سازی
+                        پروژه‌های تحلیلی در حوزه‌های مختلف از جمله بازار فولاد.
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024 - اکنون</span>
+                    <h3>مشاور فناوری و توسعه‌دهنده ارشد</h3>
+                    <h4>فعالیت مستقل و مشاوره</h4>
+                    <p>
+                        ارائه مشاوره تخصصی به استارتاپ‌ها و کسب‌وکارها در زمینه معماری نرم‌افزار،
+                        توسعه محصول و تحول دیجیتال.
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Architecture Design</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Cloud Computing</span>
+                        <span class="skill-tag">DevOps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-code"></i>
+                <div class="stat-number">50+</div>
+                <div class="stat-label">پروژه تکمیل شده</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-number">30+</div>
+                <div class="stat-label">مشتری راضی</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-award"></i>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">گواهینامه تخصصی</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <div class="stat-number">5+</div>
+                <div class="stat-label">سال تجربه</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>حمید اقتداریان</h3>
+                <p>توسعه‌دهنده فولستک و متخصص تحلیل داده</p>
+            </div>
+            <div class="footer-section">
+                <h4>لینک‌های مفید</h4>
+                <ul>
+                    <li><a href="excellence-roadmap.html">نقشه راه تعالی</a></li>
+                    <li><a href="projects.html">پروژه‌ها</a></li>
+                    <li><a href="contact.html">تماس با من</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>شبکه‌های اجتماعی</h4>
+                <div class="social-links">
+                    <a href="https://github.com/hamideghtedarian" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 حمید اقتداریان. تمامی حقوق محفوظ است.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+```
+
+</body>
+</html>
