@@ -1,564 +1,50 @@
 <!DOCTYPE html>
-
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="تجربیات ارزیابی و کاری حمید اقتداریان">
-    <title>تجربیات ارزیابی | حمید اقتداریان</title>
-
-```
-<link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-    .experience-section {
-        padding: calc(80px + 2rem) 0 4rem;
-        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    }
-
-    .experience-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    .experience-header h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--dark-bg);
-        margin-bottom: 1rem;
-    }
-
-    .experience-header p {
-        font-size: 1.125rem;
-        color: var(--text-secondary);
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .experience-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .experience-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .experience-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 5px;
-        background: linear-gradient(90deg, #f59e0b, #d97706);
-    }
-
-    .experience-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .experience-icon {
-        width: 70px;
-        height: 70px;
-        background: linear-gradient(135deg, #f59e0b, #d97706);
-        border-radius: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
-    }
-
-    .experience-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--dark-bg);
-        margin-bottom: 0.5rem;
-    }
-
-    .experience-company {
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: #f59e0b;
-        margin-bottom: 0.5rem;
-    }
-
-    .experience-period {
-        font-size: 0.875rem;
-        color: var(--text-secondary);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .experience-period i {
-        color: #f59e0b;
-    }
-
-    .experience-description {
-        color: var(--text-secondary);
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-    }
-
-    .experience-achievements {
-        margin-bottom: 1.5rem;
-    }
-
-    .experience-achievements h4 {
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--dark-bg);
-        margin-bottom: 0.75rem;
-    }
-
-    .experience-achievements ul {
-        list-style: none;
-        padding-right: 0;
-    }
-
-    .experience-achievements li {
-        position: relative;
-        padding-right: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: var(--text-secondary);
-        line-height: 1.6;
-    }
-
-    .experience-achievements li::before {
-        content: '✓';
-        position: absolute;
-        right: 0;
-        color: #f59e0b;
-        font-weight: bold;
-    }
-
-    .experience-technologies {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .tech-tag {
-        background: #fef3c7;
-        color: #92400e;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 0.875rem;
-        font-weight: 500;
-    }
-
-    .certifications-section {
-        margin-top: 4rem;
-        padding: 3rem;
-        background: white;
-        border-radius: 1rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .certifications-section h2 {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--dark-bg);
-        margin-bottom: 2rem;
-    }
-
-    .certifications-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .certification-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 1.5rem;
-        background: #fef3c7;
-        border-radius: 0.75rem;
-        transition: all 0.3s ease;
-    }
-
-    .certification-item:hover {
-        transform: translateX(-5px);
-        box-shadow: 0 5px 15px rgba(245, 158, 11, 0.2);
-    }
-
-    .certification-item i {
-        font-size: 2rem;
-        color: #f59e0b;
-    }
-
-    .certification-info h4 {
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--dark-bg);
-        margin-bottom: 0.25rem;
-    }
-
-    .certification-info p {
-        font-size: 0.875rem;
-        color: var(--text-secondary);
-    }
-
-    @media (max-width: 768px) {
-        .experience-header h1 {
-            font-size: 2rem;
-        }
-
-        .experience-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .certifications-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-```
-
+  <meta charset="UTF-8">
+  <title>آرشیو تجربیات تعالی</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <div class="logo">
-                        <h1>حمید اقتداریان</h1>
-                    </div>
-                    <button class="menu-toggle" id="menuToggle" aria-label="منوی اصلی">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <ul class="nav-menu" id="navMenu">
-                        <li><a href="../index.html" class="nav-link">خانه</a></li>
-                        <li><a href="excellence-roadmap.html" class="nav-link">نقشه راه تعالی</a></li>
-                        <li><a href="excellence-journey-archive.html" class="nav-link active">تجربیات ارزیابی</a></li>
-                        <li><a href="steel.html" class="nav-link">تحلیل بازار فولاد</a></li>
-                        <li><a href="projects.html" class="nav-link">پروژه‌ها</a></li>
-                        <li><a href="tools.html" class="nav-link">ابزارها</a></li>
-                        <li><a href="publications.html" class="nav-link">مقالات</a></li>
-                        <li><a href="data.html" class="nav-link">داده‌ها</a></li>
-                        <li><a href="contact.html" class="nav-link">تماس</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-```
-<!-- Experience Section -->
-<section class="experience-section">
-    <div class="container">
-        <div class="experience-header">
-            <h1>تجربیات ارزیابی و کاری</h1>
-            <p>سوابق حرفه‌ای و پروژه‌های موفق در زمینه‌های مختلف توسعه نرم‌افزار و تحلیل داده</p>
-        </div>
+  <h1>📚 آرشیو تجربیات تعالی</h1>
+  <p>
+    در این بخش، تجربیات واقعی حاصل از ارزیابی‌های تعالی سازمانی در صنایع مختلف مانند فولاد، معدن، و پروژه‌های تحول دیجیتال گردآوری شده‌اند.
+    هدف این آرشیو، انتقال دانش عملی و الهام‌بخشی برای سازمان‌های مشابه است.
+  </p>
 
-        <!-- Experience Grid -->
-        <div class="experience-grid">
-            <!-- Experience 1 -->
-            <div class="experience-card">
-                <div class="experience-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <h3 class="experience-title">توسعه‌دهنده فولستک ارشد</h3>
-                <p class="experience-company">شرکت فناوری نوآوران دیجیتال</p>
-                <div class="experience-period">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>فروردین 1400 - اسفند 1402</span>
-                </div>
-                <p class="experience-description">
-                    طراحی و پیاده‌سازی سیستم‌های پیچیده وب و موبایل با استفاده از فناوری‌های مدرن.
-                    مدیریت تیم توسعه و هماهنگی با واحدهای مختلف.
-                </p>
-                <div class="experience-achievements">
-                    <h4>دستاوردها:</h4>
-                    <ul>
-                        <li>توسعه پلتفرم تجارت الکترونیک با 100K+ کاربر فعال</li>
-                        <li>بهبود 40% سرعت بارگذاری اپلیکیشن</li>
-                        <li>کاهش 60% هزینه‌های سرور با بهینه‌سازی</li>
-                        <li>مدیریت تیم 8 نفره توسعه</li>
-                    </ul>
-                </div>
-                <div class="experience-technologies">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">AWS</span>
-                </div>
-            </div>
+  <h2>🔹 نمونه تجربیات ثبت‌شده</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>شماره</th>
+        <th>عنوان تجربه</th>
+        <th>سال اجرا</th>
+        <th>لینک</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>بهبود فرآیند نگهداری در صنعت فولاد</td>
+        <td>1402</td>
+        <td><a href="../docs/steel-maintenance-case.pdf">دانلود</a></td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>ارزیابی تعالی در واحد استخراج معدن</td>
+        <td>1403</td>
+        <td><a href="../docs/mining-excellence-report.pdf">دانلود</a></td>
+      </tr>
+    </tbody>
+  </table>
 
-            <!-- Experience 2 -->
-            <div class="experience-card">
-                <div class="experience-icon">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <h3 class="experience-title">متخصص تحلیل داده</h3>
-                <p class="experience-company">مؤسسه تحقیقات اقتصادی</p>
-                <div class="experience-period">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>مهر 1401 - تاکنون</span>
-                </div>
-                <p class="experience-description">
-                    تحلیل داده‌های اقتصادی و بازار، ایجاد مدل‌های پیش‌بینی با استفاده از یادگیری ماشین
-                    و ارائه گزارش‌های تحلیلی به مدیریت ارشد.
-                </p>
-                <div class="experience-achievements">
-                    <h4>دستاوردها:</h4>
-                    <ul>
-                        <li>پیاده‌سازی سیستم پیش‌بینی قیمت فولاد با دقت 92%</li>
-                        <li>تحلیل بیش از 5 میلیون رکورد داده بازار</li>
-                        <li>ایجاد داشبورد تحلیلی تعاملی</li>
-                        <li>ارائه 20+ گزارش تحلیلی تخصصی</li>
-                    </ul>
-                </div>
-                <div class="experience-technologies">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Pandas</span>
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">Tableau</span>
-                    <span class="tech-tag">SQL</span>
-                </div>
-            </div>
-
-            <!-- Experience 3 -->
-            <div class="experience-card">
-                <div class="experience-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3 class="experience-title">توسعه‌دهنده موبایل</h3>
-                <p class="experience-company">استارتاپ تکنو</p>
-                <div class="experience-period">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>آبان 1399 - اسفند 1400</span>
-                </div>
-                <p class="experience-description">
-                    توسعه اپلیکیشن‌های موبایل کراس‌پلتفرم برای iOS و Android.
-                    طراحی رابط کاربری و تجربه کاربری بهینه.
-                </p>
-                <div class="experience-achievements">
-                    <h4>دستاوردها:</h4>
-                    <ul>
-                        <li>توسعه 5 اپلیکیشن موفق با 50K+ دانلود</li>
-                        <li>امتیاز 4.5+ در App Store و Google Play</li>
-                        <li>بهینه‌سازی مصرف باتری و حافظه</li>
-                        <li>پیاده‌سازی قابلیت‌های آفلاین</li>
-                    </ul>
-                </div>
-                <div class="experience-technologies">
-                    <span class="tech-tag">React Native</span>
-                    <span class="tech-tag">Flutter</span>
-                    <span class="tech-tag">Firebase</span>
-                    <span class="tech-tag">Redux</span>
-                </div>
-            </div>
-
-            <!-- Experience 4 -->
-            <div class="experience-card">
-                <div class="experience-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <h3 class="experience-title">معمار پایگاه داده</h3>
-                <p class="experience-company">شرکت داده‌پردازی ایران</p>
-                <div class="experience-period">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>خرداد 1399 - مهر 1399</span>
-                </div>
-                <p class="experience-description">
-                    طراحی و بهینه‌سازی پایگاه‌های داده در مقیاس بزرگ.
-                    مدیریت و نگهداری سیستم‌های دیتابیس و بکاپ‌گیری.
-                </p>
-                <div class="experience-achievements">
-                    <h4>دستاوردها:</h4>
-                    <ul>
-                        <li>طراحی معماری دیتابیس برای 10 میلیون کاربر</li>
-                        <li>بهبود 70% سرعت Query ها</li>
-                        <li>پیاده‌سازی سیستم بکاپ خودکار</li>
-                        <li>مهاجرت موفق از MySQL به PostgreSQL</li>
-                    </ul>
-                </div>
-                <div class="experience-technologies">
-                    <span class="tech-tag">PostgreSQL</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">Redis</span>
-                    <span class="tech-tag">MongoDB</span>
-                </div>
-            </div>
-
-            <!-- Experience 5 -->
-            <div class="experience-card">
-                <div class="experience-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3 class="experience-title">مدرس برنامه‌نویسی</h3>
-                <p class="experience-company">موسسه آموزش عالی کدنویسان</p>
-                <div class="experience-period">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>مهر 1398 - خرداد 1399</span>
-                </div>
-                <p class="experience-description">
-                    تدریس دوره‌های تخصصی برنامه‌نویسی وب، موبایل و تحلیل داده
-                    به دانشجویان و علاقه‌مندان حوزه IT.
-                </p>
-                <div class="experience-achievements">
-                    <h4>دستاوردها:</h4>
-                    <ul>
-                        <li>تدریس به بیش از 500 دانشجو</li>
-                        <li>طراحی محتوای 10 دوره آموزشی</li>
-                        <li>امتیاز رضایت 4.8 از 5</li>
-                        <li>تولید 50+ ساعت ویدیوی آموزشی</li>
-                    </ul>
-                </div>
-                <div class="experience-technologies">
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Django</span>
-                </div>
-            </div>
-
-            <!-- Experience 6 -->
-            <div class="experience-card">
-                <div class="experience-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3 class="experience-title">مشاور امنیت سایبری</h3>
-                <p class="experience-company">فریلنسر</p>
-                <div class="experience-period">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>فروردین 1398 - شهریور 1398</span>
-                </div>
-                <p class="experience-description">
-                    ارزیابی امنیتی وب‌سایت‌ها و اپلیکیشن‌ها، شناسایی آسیب‌پذیری‌ها
-                    و ارائه راهکارهای بهبود امنیت.
-                </p>
-                <div class="experience-achievements">
-                    <h4>دستاوردها:</h4>
-                    <ul>
-                        <li>ارزیابی امنیتی 15 سیستم مختلف</li>
-                        <li>شناسایی و رفع 200+ آسیب‌پذیری</li>
-                        <li>پیاده‌سازی استانداردهای امنیتی OWASP</li>
-                        <li>آموزش تیم‌های توسعه در حوزه امنیت</li>
-                    </ul>
-                </div>
-                <div class="experience-technologies">
-                    <span class="tech-tag">OWASP</span>
-                    <span class="tech-tag">Penetration Testing</span>
-                    <span class="tech-tag">Security Audit</span>
-                    <span class="tech-tag">SSL/TLS</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Certifications Section -->
-        <div class="certifications-section">
-            <h2>گواهینامه‌ها و مدارک تخصصی</h2>
-            <div class="certifications-grid">
-                <div class="certification-item">
-                    <i class="fas fa-certificate"></i>
-                    <div class="certification-info">
-                        <h4>AWS Certified Solutions Architect</h4>
-                        <p>Amazon Web Services - 2023</p>
-                    </div>
-                </div>
-                <div class="certification-item">
-                    <i class="fas fa-certificate"></i>
-                    <div class="certification-info">
-                        <h4>Google Data Analytics Professional</h4>
-                        <p>Google - 2022</p>
-                    </div>
-                </div>
-                <div class="certification-item">
-                    <i class="fas fa-certificate"></i>
-                    <div class="certification-info">
-                        <h4>Meta Front-End Developer</h4>
-                        <p>Meta (Facebook) - 2022</p>
-                    </div>
-                </div>
-                <div class="certification-item">
-                    <i class="fas fa-certificate"></i>
-                    <div class="certification-info">
-                        <h4>Machine Learning Specialization</h4>
-                        <p>Stanford University - 2021</p>
-                    </div>
-                </div>
-                <div class="certification-item">
-                    <i class="fas fa-certificate"></i>
-                    <div class="certification-info">
-                        <h4>Professional Scrum Master (PSM I)</h4>
-                        <p>Scrum.org - 2021</p>
-                    </div>
-                </div>
-                <div class="certification-item">
-                    <i class="fas fa-certificate"></i>
-                    <div class="certification-info">
-                        <h4>Docker Certified Associate</h4>
-                        <p>Docker Inc. - 2020</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>حمید اقتداریان</h3>
-                <p>توسعه‌دهنده فولستک و متخصص تحلیل داده</p>
-            </div>
-            <div class="footer-section">
-                <h4>لینک‌های مفید</h4>
-                <ul>
-                    <li><a href="excellence-roadmap.html">نقشه راه تعالی</a></li>
-                    <li><a href="projects.html">پروژه‌ها</a></li>
-                    <li><a href="contact.html">تماس با من</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>شبکه‌های اجتماعی</h4>
-                <div class="social-links">
-                    <a href="https://github.com/hamideghtedarian" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 حمید اقتداریان. تمامی حقوق محفوظ است.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="../assets/js/main.js"></script>
-```
+  <h2>🔗 لینک‌های مرتبط</h2>
+  <ul>
+    <li><a href="roadmap.html">نقشه راه تعالی</a></li>
+    <li><a href="projects.html">پروژه‌های بهبود</a></li>
+    <li><a href="tools.html">ابزارها و فرم‌ها</a></li>
+  </ul>
 
 </body>
 </html>
