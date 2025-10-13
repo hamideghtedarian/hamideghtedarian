@@ -1,0 +1,91 @@
+/* 🌟 سبک پایه برای چارچوب تعالی سازمانی - نسخه توسعه‌یافته */
+
+@font-face {
+  font-family: 'IranSans';
+  src: url('../fonts/IRANSans.woff2') format('woff2'),
+       url('../fonts/IRANSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'IranSans', "Segoe UI", Tahoma, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+  background-image: url('../img/bg-light-pattern.png');
+  background-repeat: repeat;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-top: 1em;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.6em;
+  text-align: center;
+}
+
+th {
+  background-color: #eaeaea;
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1c6ea4;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+form {
+  background-color: #fff;
+  padding: 1.5em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-top: 2em;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1em;
+}
