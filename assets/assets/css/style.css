@@ -89,3 +89,14 @@ label {
   display: block;
   margin-top: 1em;
 }
+@font-face {
+  font-family: 'IranSans';
+  src: url('../fonts/IRANSans.woff2') format('woff2'),
+       url('../fonts/IRANSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'IranSans', "Segoe UI", Tahoma, sans-serif;
+}
