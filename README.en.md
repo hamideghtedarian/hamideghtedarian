@@ -1,7 +1,6 @@
 # 🌐 Organizational Excellence Project – hamideghtedarian.github.io
 
 This repository serves as the official platform for publishing tools, forms, documentation, and real-world insights related to organizational excellence. All content is ethically licensed and professionally branded under the name **Hamideghtedarian**.
-
 ---
 
 ## 🎯 Project Objectives
