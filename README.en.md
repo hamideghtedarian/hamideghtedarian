@@ -1,49 +1,55 @@
-# 🌍 Organizational Excellence Project – Designed by Abdolhamid Eghtedarian
+# 🌐 Organizational Excellence Project – hamideghtedarian.github.io
 
-## 🎯 Project Purpose
-
-This repository provides a modular, bilingual framework for implementing organizational excellence across mining, steel, and industrial sectors.  
-It includes fillable forms, executive dashboards, ethical licenses, and structured documentation aligned with EFQM 2025, ISO, and SDG standards.
-
-## 🧩 Key Components
-
-- Fillable forms for suggestions, messages, learning logs, and improvement actions  
-- Executive dashboard for tracking form status and follow-ups  
-- Custom ethical license for responsible use and attribution  
-- Official author profile and release notes  
-- Glossary and usage guide for internal and external users
-
-## 📋 Core Forms
-
-| Form | Purpose | Link |
-|------|---------|------|
-| Form-01 | Visitor Suggestions | [Form-01.md](Form-01.md)  
-| Fillable HTML | Browser-based input | [Form-01.fillable.html](Form-01.fillable.html)  
-| Sample Form | Completed example | [Form-01.sample.md](Form-01.sample.md)  
-| Dashboard | Form tracking | [FORMS-DASHBOARD.md](FORMS-DASHBOARD.md)
-
-## ⚖️ Licensing & Attribution
-
-All content is ethically licensed and professionally attributed to:
-
-**Author:** Abdolhamid Eghtedarian  
-**Title:** Senior Management Consultant & Transformation Architect  
-**License:** [LICENSE.abdolhamid.md](LICENSE.abdolhamid.md)  
-**Attribution:** [ATTRIBUTION.md](ATTRIBUTION.md)
-
-## 📘 How to Use
-
-- Select the appropriate form based on your purpose  
-- Use fillable versions (HTML, Markdown, PDF) to submit input  
-- Track status via the executive dashboard  
-- Respect the ethical license and retain author attribution
-
-## 🌐 External Standards Referenced
-
-- [EFQM 2025 Framework](https://efqm.org)  
-- [ISO Management Standards](https://www.iso.org/standards.html)  
-- [UN Sustainable Development Goals](https://sdgs.un.org/goals)
+This repository serves as the official platform for publishing tools, forms, documentation, and real-world insights related to organizational excellence. All content is ethically licensed and professionally branded under the name **Hamideghtedarian**.
 
 ---
 
-© Abdolhamid Eghtedarian – All rights reserved  
+## 🎯 Project Objectives
+
+- Design and implementation of excellence frameworks aligned with EFQM 2025, ISO, and SDG standards
+- Development of operational forms, analytical dashboards, and reusable tools for industrial sectors
+- Sharing real-world experiences from excellence assessments in mining, steel, and digital transformation
+- Building a bilingual, scalable, and ethically governed reference for professional communities
+
+---
+
+## 🧩 Project Structure
+
+| Section | Description |
+|---------|-------------|
+| `index.html` | Main landing page |
+| `pages/` | Content pages (roadmap, tools, projects, contact, etc.) |
+| `forms-html/` | Excellence forms in Persian |
+| `forms-html-en/` | Translated forms in English |
+| `dashboards/` | Dashboards for forms and projects |
+| `assets/` | Visual and technical resources (CSS, JS, images, fonts) |
+| `docs/` | Publications, reports, and technical documents |
+| `LICENSE` | Ethical license and usage terms |
+| `structure.md` | Documentation of project architecture ✅
+
+---
+
+## 📌 Key Features
+
+- Modular and scalable design
+- Bilingual support (Persian and English)
+- Custom fonts and professional styling
+- GitHub Pages compatibility for public access
+- Ethically licensed and professionally branded content
+
+---
+
+## 📬 Contact
+
+To share feedback or request collaboration, please use the form below:
+
+🔗 [User Feedback Form](forms-html-en/Feedback-Form-EN.html)
+
+📧 Official Email: **hamideghtedarian@gmail.com**  
+🔗 GitHub Profile: [github.com/hamideghtedarian](https://github.com/hamideghtedarian)
+
+---
+
+## 📖 License
+
+All content is published under a custom ethical license designed by **Hamideghtedarian**. Usage is permitted only with proper attribution and adherence to intellectual property principles.
