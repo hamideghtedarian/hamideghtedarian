@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم بازخورد کاربران</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <h1>📨 فرم بازخورد کاربران</h1>
+  <p>
+    لطفاً نظرات، پیشنهادات، یا تجربه خود را از استفاده فرم‌ها و داشبوردها با ما به اشتراک بگذارید.
+    تمامی بازخوردها با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت و تحلیل می‌شوند.
+  </p>
+
+  <form>
+    <label>نام کامل (اختیاری):</label>
+    <input type="text" name="fullname">
+
+    <label>ایمیل (اختیاری):</label>
+    <input type="email" name="email">
+
+    <label>فرمی که درباره آن بازخورد می‌دهید:</label>
+    <select name="form_code">
+      <option>فرم ۲۰</option>
+      <option>فرم ۲۵</option>
+      <option>فرم ۳۰</option>
+      <option>فرم ۳۵</option>
+      <option>داشبوردها</option>
+    </select>
+
+    <label>نوع بازخورد:</label>
+    <select name="feedback_type">
+      <option>پیشنهاد بهبود</option>
+      <option>اشکال فنی</option>
+      <option>تجربه کاربری</option>
+      <option>سایر</option>
+    </select>
+
+    <label>شرح بازخورد:</label>
+    <textarea name="feedback_text" rows="4"></textarea>
+
+    <label>آیا مایل به دریافت پاسخ هستید؟</label>
+    <select name="reply_preference">
+      <option>بله</option>
+      <option>خیر</option>
+    </select>
+  </form>
+
+</body>
+</html>
