@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h1>📊 Excellence Forms Dashboard</h1>
+  <p>
+    This dashboard provides a visual overview of excellence forms, their categories, and release status.
+    All forms are branded under <strong>Hamideghtedarian</strong> and aligned with EFQM 2025, ISO, and SDG standards.
+  </p>
+
+  <h2>📄 Form Summary Table</h2>
+  <table border="1" cellpadding="8">
+    <thead>
+      <tr>
+        <th>Form Code</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Form 01</td>
+        <td>Stakeholder Mapping</td>
+        <td>✅ Published</td>
+        <td><a href="../forms-html-en/Form-01-EN.html">View</a></td>
+      </tr>
+      <tr>
+        <td>Form 10</td>
+        <td>Strategic Initiative Tracker</td>
+        <td>✅ Published</td>
+        <td><a href="../forms-html-en/Form-10-EN.html">View</a></td>
+      </tr>
+      <tr>
+        <td>Form 90</td>
+        <td>Feedback and Learning</td>
+        <td>✅ Published</td>
+        <td><a href="../forms-html-en/Form-90-EN.html">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>📈 Form Distribution Chart</h2>
+  <canvas id="formChart" width="400" height="200"></canvas>
+  <script>
+    const ctx = document.getElementById('formChart').getContext('2d');
+    const formChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Stakeholder', 'Strategy', 'Feedback'],
+        datasets: [{
+          label: 'Number of Forms',
+          data: [1, 1, 1],
+          backgroundColor: ['#4CAF50', '#2196F3', '#FFC107']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Form Categories Overview'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📝 Notes</h2>
+  <p>
+    This dashboard will expand as new forms are added. All visual elements are designed for clarity and accessibility.
+  </p>
+
+</body>
+</html>
