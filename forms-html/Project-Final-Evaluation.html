@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ارزیابی نهایی پروژه</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <h1>📋 فرم ارزیابی نهایی پروژه</h1>
+  <p>
+    این فرم برای ارزیابی اثربخشی، تحقق اهداف، و مستندسازی درس‌آموخته‌ها پس از پایان پروژه طراحی شده است.
+    تمامی ارزیابی‌ها با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شوند.
+  </p>
+
+  <label>عنوان پروژه:</label>
+  <input type="text" name="project_title">
+
+  <label>تاریخ پایان پروژه:</label>
+  <input type="date" name="completion_date">
+
+  <label>آیا اهداف پروژه محقق شده‌اند؟</label>
+  <select name="goal_achieved">
+    <option>بله</option>
+    <option>خیر</option>
+    <option>تا حدی</option>
+  </select>
+
+  <label>شاخص‌های کلیدی موفقیت:</label>
+  <textarea name="kpi_summary" rows="3"></textarea>
+
+  <label>مهم‌ترین دستاوردها:</label>
+  <textarea name="achievements" rows="3"></textarea>
+
+  <label>موانع و چالش‌های اصلی:</label>
+  <textarea name="challenges" rows="3"></textarea>
+
+  <label>درس‌آموخته‌ها و توصیه‌ها:</label>
+  <textarea name="lessons_learned" rows="3"></textarea>
+
+  <label>مسئول ارزیابی:</label>
+  <input type="text" name="evaluator_name">
+
+</body>
+</html>
