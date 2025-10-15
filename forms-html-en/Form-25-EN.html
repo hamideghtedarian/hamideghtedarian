@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form 25 – Digital Maturity Assessment</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📄 Form 25 – Digital Maturity Assessment</h1>
+  <p>
+    This form evaluates the level of digital maturity across key organizational domains.
+    All entries are ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <label>Organizational Unit Name:</label>
+  <input type="text" name="unit_name">
+
+  <label>Current Digital Status Overview:</label>
+  <textarea name="current_status" rows="3"></textarea>
+
+  <h2>📊 Maturity Evaluation Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Domain</th>
+        <th>Maturity Level</th>
+        <th>Status Description</th>
+        <th>Suggested Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Technology Infrastructure</td>
+        <td>
+          <select name="infra_level">
+            <option>Basic</option><option>Developing</option><option>Mature</option>
+          </select>
+        </td>
+        <td><input type="text" name="infra_desc"></td>
+        <td><input type="text" name="infra_action"></td>
+      </tr>
+      <tr>
+        <td>Digital Processes</td>
+        <td>
+          <select name="process_level">
+            <option>Basic</option><option>Developing</option><option>Mature</option>
+          </select>
+        </td>
+        <td><input type="text" name="process_desc"></td>
+        <td><input type="text" name="process_action"></td>
+      </tr>
+      <tr>
+        <td>Culture and Skills</td>
+        <td>
+          <select name="culture_level">
+            <option>Basic</option><option>Developing</option><option>Mature</option>
+          </select>
+        </td>
+        <td><input type="text" name="culture_desc"></td>
+        <td><input type="text" name="culture_action"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <label>Additional Notes:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
