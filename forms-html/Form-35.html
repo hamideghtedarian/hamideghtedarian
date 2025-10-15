@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ۳۵ – نقشه مسیر تحول</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📄 فرم ۳۵ – نقشه مسیر تحول</h1>
+  <p>
+    این فرم برای طراحی و مستندسازی مراحل تحول سازمانی در حوزه‌های کلیدی طراحی شده است.
+    تمامی اطلاعات با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شود.
+  </p>
+
+  <label>عنوان پروژه تحول:</label>
+  <input type="text" name="project_title">
+
+  <label>شرح کلی هدف تحول:</label>
+  <textarea name="project_goal" rows="3"></textarea>
+
+  <h2>📊 جدول مسیر تحول</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>مرحله</th>
+        <th>شرح فعالیت</th>
+        <th>نقطه عطف</th>
+        <th>مسئول اجرا</th>
+        <th>شاخص موفقیت</th>
+        <th>زمان‌بندی</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="step1"></td>
+        <td><input type="text" name="desc1"></td>
+        <td><input type="text" name="milestone1"></td>
+        <td><input type="text" name="owner1"></td>
+        <td><input type="text" name="kpi1"></td>
+        <td><input type="text" name="timeline1"></td>
+      </tr>
+      <!-- ردیف‌های بیشتر قابل اضافه شدن هستند -->
+    </tbody>
+  </table>
+
+  <label>توضیحات تکمیلی:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
