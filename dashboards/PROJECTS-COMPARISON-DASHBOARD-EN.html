@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects Comparison Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; }
+    canvas { margin-top: 30px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Projects Comparison Dashboard</h1>
+  <p>
+    This dashboard compares key projects based on progress, goal achievement, and lessons learned.
+    All data is ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <h2>📈 Progress Comparison</h2>
+  <canvas id="progressChart" width="400" height="200"></canvas>
+  <script>
+    const ctx1 = document.getElementById('progressChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Project A', 'Project B', 'Project C'],
+        datasets: [{
+          label: 'Completion %',
+          data: [85, 60, 40],
+          backgroundColor: ['#4CAF50', '#2196F3', '#FFC107']
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Project Completion Comparison'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>🎯 Goal Achievement Status</h2>
+  <canvas id="goalChart" width="400" height="200"></canvas>
+  <script>
+    const ctx2 = document.getElementById('goalChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Achieved', 'Partially', 'Not Achieved'],
+        datasets: [{
+          label: 'Goal Status',
+          data: [2, 1, 0],
+          backgroundColor: ['#4CAF50', '#FFC107', '#F44336']
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Goal Achievement Across Projects'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📄 Comparative Project Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Project Title</th>
+        <th>Completion %</th>
+        <th>Goal Status</th>
+        <th>Key Lesson Learned</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Digital Transformation – Steel</td>
+        <td>85%</td>
+        <td>✅ Achieved</td>
+        <td>Importance of early team training</td>
+      </tr>
+      <tr>
+        <td>Mining Structure Redesign</td>
+        <td>60%</td>
+        <td>🟡 Partially</td>
+        <td>Need for cross-unit coordination</td>
+      </tr>
+      <tr>
+        <td>EFQM 2025 Assessment</td>
+        <td>40%</td>
+        <td>🔄 In Progress</td>
+        <td>Define KPIs from the start</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
