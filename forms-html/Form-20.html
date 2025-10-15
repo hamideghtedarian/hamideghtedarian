@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ۲۰ – تحلیل ریسک فرآیندها</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📄 فرم ۲۰ – تحلیل ریسک فرآیندها</h1>
+  <p>
+    این فرم برای شناسایی، ارزیابی، و کاهش ریسک‌های بالقوه در فرآیندهای کلیدی طراحی شده است.
+    تمامی اطلاعات با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شود.
+  </p>
+
+  <label>عنوان فرآیند:</label>
+  <input type="text" name="process_title">
+
+  <label>شرح کلی فرآیند:</label>
+  <textarea name="process_description" rows="3"></textarea>
+
+  <h2>📊 جدول ارزیابی ریسک</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>گام فرآیند</th>
+        <th>ریسک بالقوه</th>
+        <th>احتمال وقوع</th>
+        <th>شدت اثر</th>
+        <th>اقدام اصلاحی</th>
+        <th>مسئول پیگیری</th>
+        <th>وضعیت اجرا</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="step1"></td>
+        <td><input type="text" name="risk1"></td>
+        <td>
+          <select name="probability1">
+            <option>کم</option><option>متوسط</option><option>زیاد</option>
+          </select>
+        </td>
+        <td>
+          <select name="impact1">
+            <option>کم</option><option>متوسط</option><option>زیاد</option>
+          </select>
+        </td>
+        <td><input type="text" name="action1"></td>
+        <td><input type="text" name="owner1"></td>
+        <td>
+          <select name="status1">
+            <option>انجام شده</option><option>در حال انجام</option><option>انجام نشده</option>
+          </select>
+        </td>
+      </tr>
+      <!-- ردیف‌های بیشتر قابل اضافه شدن هستند -->
+    </tbody>
+  </table>
+
+  <label>توضیحات تکمیلی:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
