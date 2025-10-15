@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form 30 – RACI Responsibility Matrix</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📄 Form 30 – RACI Responsibility Matrix</h1>
+  <p>
+    This form defines roles and responsibilities across key tasks using the RACI model.
+    All entries are ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <label>Activity or Project Title:</label>
+  <input type="text" name="activity_title">
+
+  <label>Activity Description:</label>
+  <textarea name="activity_description" rows="3"></textarea>
+
+  <h2>📊 RACI Matrix Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Task / Activity</th>
+        <th>Responsible (R)</th>
+        <th>Accountable (A)</th>
+        <th>Consulted (C)</th>
+        <th>Informed (I)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="task1"></td>
+        <td><input type="text" name="responsible1"></td>
+        <td><input type="text" name="accountable1"></td>
+        <td><input type="text" name="consulted1"></td>
+        <td><input type="text" name="informed1"></td>
+      </tr>
+      <!-- More rows can be added -->
+    </tbody>
+  </table>
+
+  <label>Additional Notes:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
