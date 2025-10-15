@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>داشبورد تحلیل بازخوردها</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 داشبورد تحلیل بازخوردها</h1>
+  <p>
+    این داشبورد وضعیت بازخوردهای دریافتی از کاربران را نمایش می‌دهد—شامل دسته‌بندی موضوعی، فرم‌های مرتبط، و وضعیت پاسخ‌گویی.
+    تمامی داده‌ها بر اساس فرم‌های رسمی <strong>عبدالحمید اقتداریان</strong> ثبت شده‌اند.
+  </p>
+
+  <h2>📈 نمودار موضوعی بازخوردها</h2>
+  <canvas id="typeChart" width="400" height="200"></canvas>
+  <script>
+    const ctx1 = document.getElementById('typeChart').getContext('2d');
+    const typeChart = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['پیشنهاد بهبود', 'اشکال فنی', 'تجربه کاربری', 'سایر'],
+        datasets: [{
+          label: 'تعداد بازخوردها',
+          data: [6, 2, 3, 1],
+          backgroundColor: ['#4CAF50', '#F44336', '#2196F3', '#9E9E9E']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'دسته‌بندی موضوعی بازخوردها'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📊 نمودار وضعیت پاسخ‌گویی</h2>
+  <canvas id="statusChart" width="400" height="200"></canvas>
+  <script>
+    const ctx2 = document.getElementById('statusChart').getContext('2d');
+    const statusChart = new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['پاسخ داده شد', 'در حال بررسی', 'نیاز به پیگیری'],
+        datasets: [{
+          label: 'وضعیت پاسخ‌گویی',
+          data: [7, 3, 2],
+          backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'وضعیت پاسخ‌گویی به بازخوردها'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📄 جدول بازخوردهای اخیر</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>تاریخ</th>
+        <th>فرم مرتبط</th>
+        <th>نوع بازخورد</th>
+        <th>وضعیت پاسخ‌گویی</th>
+        <th>مسئول تحلیل</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>۱۴۰۴/۰۷/۱۰</td>
+        <td>فرم ۲۰</td>
+        <td>پیشنهاد بهبود</td>
+        <td>✅ پاسخ داده شد</td>
+        <td>واحد تعالی</td>
+      </tr>
+      <tr>
+        <td>۱۴۰۴/۰۷/۱۲</td>
+        <td>فرم ۳۰</td>
+        <td>اشکال فنی</td>
+        <td>🟡 در حال بررسی</td>
+        <td>تیم فنی</td>
+      </tr>
+      <tr>
+        <td>۱۴۰۴/۰۷/۱۳</td>
+        <td>داشبورد فرم‌ها</td>
+        <td>تجربه کاربری</td>
+        <td>🟠 نیاز به پیگیری</td>
+        <td>واحد طراحی</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🔗 لینک‌های مرتبط</h2>
+  <ul>
+    <li><a href="../forms-html/Feedback-Form.html">فرم بازخورد کاربران</a></li>
+    <li><a href="../forms-html/Feedback-Analysis.html">فرم تحلیل بازخورد</a></li>
+  </ul>
+
+</body>
+</html>
