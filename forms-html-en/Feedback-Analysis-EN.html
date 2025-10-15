@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Analysis Form</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📋 Feedback Analysis Form</h1>
+  <p>
+    This form documents and analyzes user feedback to support continuous improvement.
+    All entries are ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <label>Date Received:</label>
+  <input type="date" name="feedback_date">
+
+  <label>Related Form or Dashboard:</label>
+  <select name="related_form">
+    <option>Form 20</option>
+    <option>Form 25</option>
+    <option>Form 30</option>
+    <option>Form 35</option>
+    <option>Dashboards</option>
+  </select>
+
+  <label>Feedback Type:</label>
+  <select name="feedback_type">
+    <option>Improvement Suggestion</option>
+    <option>Technical Issue</option>
+    <option>User Experience</option>
+    <option>Other</option>
+  </select>
+
+  <label>Feedback Description:</label>
+  <textarea name="feedback_text" rows="3"></textarea>
+
+  <label>Action Taken or Proposed:</label>
+  <textarea name="action_taken" rows="3"></textarea>
+
+  <label>Response Status:</label>
+  <select name="response_status">
+    <option>Responded</option>
+    <option>Under Review</option>
+    <option>Needs Follow-up</option>
+  </select>
+
+  <label>Analyst or Responsible Person:</label>
+  <input type="text" name="analyst_name">
+
+</body>
+</html>
