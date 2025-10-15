@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>تست‌کننده لینک‌های سایت</title>
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .ok { color: green; font-weight: bold; }
+    .fail { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 تست‌کننده لینک‌های سایت</h1>
+  <p>این ابزار وضعیت لینک‌های فرم‌ها و داشبوردهای مدیریتی را بررسی می‌کند.</p>
+
+  <table id="results">
+    <thead>
+      <tr>
+        <th>عنوان</th>
+        <th>لینک</th>
+        <th>وضعیت</th>
+        <th>پیشنهاد اصلاح</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const links = [
+      { title: "فرم بازخورد", path: "forms-html/Feedback-Form.html" },
+      { title: "داشبورد تحلیل بازخورد", path: "dashboards/FEEDBACK-DASHBOARD.html" },
+      { title: "فرم گزارش پیشرفت", path: "forms-html/Project-Progress-Report.html" },
+      { title: "داشبورد پیشرفت پروژه‌ها", path: "dashboards/PROJECTS-PROGRESS-DASHBOARD.html" },
+      { title: "فرم ارزیابی نهایی", path: "forms-html/Project-Final-Evaluation.html" },
+      { title: "داشبورد مقایسه‌ای پروژه‌ها", path: "dashboards/PROJECTS-COMPARISON-DASHBOARD.html" },
+      { title: "فرم ارزیابی تیم پروژه", path: "forms-html/Project-Team-Evaluation.html" },
+      { title: "فرم پیشنهاد بهبود داخلی", path: "forms-html/Internal-Improvement-Suggestions.html" }
+    ];
+
+    const base = "https://hamideghtedarian.github.io/";
+
+    links.forEach(link => {
+      fetch(base + link.path)
+        .then(res => {
+          const status = res.ok ? "✅ فعال" : "❌ غیرفعال";
+          const suggestion = res.ok ? "" : `بررسی کنید که فایل در مسیر <code>${link.path}</code> قرار دارد`;
+          document.querySelector("#results tbody").innerHTML += `
+            <tr>
+              <td>${link.title}</td>
+              <td><a href="${base + link.path}" target="_blank">${link.path}</a></td>
+              <td class="${res.ok ? 'ok' : 'fail'}">${status}</td>
+              <td>${suggestion}</td>
+            </tr>
+          `;
+        })
+        .catch(() => {
+          document.querySelector("#results tbody").innerHTML += `
+            <tr>
+              <td>${link.title}</td>
+              <td><a href="${base + link.path}" target="_blank">${link.path}</a></td>
+              <td class="fail">❌ خطا در بررسی</td>
+              <td>بررسی اتصال یا نام فایل</td>
+            </tr>
+          `;
+        });
+    });
+  </script>
+
+</body>
+</html>
