@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Analysis Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Feedback Analysis Dashboard</h1>
+  <p>
+    This dashboard visualizes user feedback across forms and dashboards—categorized by type, response status, and related tools.
+    All data is ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <h2>📈 Feedback Type Chart</h2>
+  <canvas id="typeChart" width="400" height="200"></canvas>
+  <script>
+    const ctx1 = document.getElementById('typeChart').getContext('2d');
+    const typeChart = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Improvement', 'Technical Issue', 'User Experience', 'Other'],
+        datasets: [{
+          label: 'Feedback Count',
+          data: [6, 2, 3, 1],
+          backgroundColor: ['#4CAF50', '#F44336', '#2196F3', '#9E9E9E']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Feedback by Type'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📊 Response Status Chart</h2>
+  <canvas id="statusChart" width="400" height="200"></canvas>
+  <script>
+    const ctx2 = document.getElementById('statusChart').getContext('2d');
+    const statusChart = new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Responded', 'Under Review', 'Needs Follow-up'],
+        datasets: [{
+          label: 'Response Status',
+          data: [7, 3, 2],
+          backgroundColor: ['#4CAF50', '#FFC107', '#FF5722']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Feedback Response Status'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📄 Recent Feedback Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Related Form</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Analyst</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025-10-01</td>
+        <td>Form 20</td>
+        <td>Improvement</td>
+        <td>✅ Responded</td>
+        <td>Excellence Unit</td>
+      </tr>
+      <tr>
+        <td>2025-10-03</td>
+        <td>Form 30</td>
+        <td>Technical Issue</td>
+        <td>🟡 Under Review</td>
+        <td>Tech Team</td>
+      </tr>
+      <tr>
+        <td>2025-10-04</td>
+        <td>Forms Dashboard</td>
+        <td>User Experience</td>
+        <td>🟠 Needs Follow-up</td>
+        <td>Design Team</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>🔗 Related Links</h2>
+  <ul>
+    <li><a href="../forms-html-en/Feedback-Form-EN.html">User Feedback Form</a></li>
+    <li><a href="../forms-html-en/Feedback-Analysis-EN.html">Feedback Analysis Form</a></li>
+  </ul>
+
+</body>
+</html>
