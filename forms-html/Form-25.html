@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ۲۵ – ارزیابی بلوغ دیجیتال</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📄 فرم ۲۵ – ارزیابی بلوغ دیجیتال</h1>
+  <p>
+    این فرم برای سنجش سطح بلوغ دیجیتال در حوزه‌های مختلف سازمان طراحی شده است.
+    تمامی اطلاعات با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شود.
+  </p>
+
+  <label>نام واحد سازمانی:</label>
+  <input type="text" name="unit_name">
+
+  <label>توضیح کلی وضعیت دیجیتال فعلی:</label>
+  <textarea name="current_status" rows="3"></textarea>
+
+  <h2>📊 جدول ارزیابی بلوغ</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>حوزه</th>
+        <th>سطح بلوغ</th>
+        <th>توضیح وضعیت</th>
+        <th>اقدام پیشنهادی</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>زیرساخت فناوری</td>
+        <td>
+          <select name="infra_level">
+            <option>مقدماتی</option><option>در حال توسعه</option><option>بالغ</option>
+          </select>
+        </td>
+        <td><input type="text" name="infra_desc"></td>
+        <td><input type="text" name="infra_action"></td>
+      </tr>
+      <tr>
+        <td>فرآیندهای دیجیتال</td>
+        <td>
+          <select name="process_level">
+            <option>مقدماتی</option><option>در حال توسعه</option><option>بالغ</option>
+          </select>
+        </td>
+        <td><input type="text" name="process_desc"></td>
+        <td><input type="text" name="process_action"></td>
+      </tr>
+      <tr>
+        <td>فرهنگ و مهارت‌ها</td>
+        <td>
+          <select name="culture_level">
+            <option>مقدماتی</option><option>در حال توسعه</option><option>بالغ</option>
+          </select>
+        </td>
+        <td><input type="text" name="culture_desc"></td>
+        <td><input type="text" name="culture_action"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <label>توضیحات تکمیلی:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
