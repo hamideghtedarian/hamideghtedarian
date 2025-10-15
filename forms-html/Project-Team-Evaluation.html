@@ -4,53 +4,76 @@
   <meta charset="UTF-8">
   <title>فرم ارزیابی تیم پروژه</title>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    body { direction: rtl; font-family: sans-serif; }
-    label { display: block; margin-top: 10px; font-weight: bold; }
-    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-  </style>
 </head>
 <body>
 
-  <h1>👥 فرم ارزیابی تیم پروژه</h1>
-  <p>
-    این فرم برای ارزیابی عملکرد، همکاری، و یادگیری اعضای تیم پروژه طراحی شده است.
-    تمامی ارزیابی‌ها با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شوند.
-  </p>
+  <nav>
+    <ul>
+      <li><a href="../hub.html">مرکز فرم‌ها</a></li>
+      <li><a href="../index.html">صفحه اصلی</a></li>
+      <li><a href="../contact.html">تماس با ما</a></li>
+    </ul>
+  </nav>
 
-  <label>عنوان پروژه:</label>
-  <input type="text" name="project_title">
+  <section>
+    <h1>👥 فرم ارزیابی تیم پروژه</h1>
+    <p>
+      این فرم برای ارزیابی عملکرد، همکاری، و یادگیری اعضای تیم پروژه طراحی شده است.  
+      تمامی ارزیابی‌ها با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شوند.
+    </p>
 
-  <label>نام ارزیاب:</label>
-  <input type="text" name="evaluator">
+    <label>عنوان پروژه:</label>
+    <input type="text" name="project_title" placeholder="مثلاً: تحول دیجیتال در فولاد">
 
-  <h2>📊 جدول ارزیابی اعضا</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>نام عضو</th>
-        <th>میزان مشارکت</th>
-        <th>همکاری تیمی</th>
-        <th>یادگیری و رشد</th>
-        <th>نمره کلی</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><input type="text" name="member1"></td>
-        <td><select><option>کم</option><option>متوسط</option><option>بالا</option></select></td>
-        <td><select><option>ضعیف</option><option>قابل قبول</option><option>عالی</option></select></td>
-        <td><select><option>کم</option><option>قابل توجه</option><option>چشمگیر</option></select></td>
-        <td><input type="number" name="score1" min="0" max="100"></td>
-      </tr>
-      <!-- ردیف‌های بیشتر قابل افزودن هستند -->
-    </tbody>
-  </table>
+    <label>نام ارزیاب:</label>
+    <input type="text" name="evaluator" placeholder="نام کامل شما">
 
-  <label>توضیحات تکمیلی:</label>
-  <textarea name="notes" rows="3"></textarea>
+    <h2>📊 جدول ارزیابی اعضا</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>نام عضو</th>
+          <th>میزان مشارکت</th>
+          <th>همکاری تیمی</th>
+          <th>یادگیری و رشد</th>
+          <th>نمره کلی</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="member1" placeholder="مثلاً: علی رضایی"></td>
+          <td>
+            <select>
+              <option>کم</option>
+              <option>متوسط</option>
+              <option>بالا</option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option>ضعیف</option>
+              <option>قابل قبول</option>
+              <option>عالی</option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option>کم</option>
+              <option>قابل توجه</option>
+              <option>چشمگیر</option>
+            </select>
+          </td>
+          <td><input type="number" name="score1" min="0" max="100" placeholder="مثلاً: 85"></td>
+        </tr>
+        <!-- ردیف‌های بیشتر قابل افزودن هستند -->
+      </tbody>
+    </table>
+
+    <label>توضیحات تکمیلی:</label>
+    <textarea name="notes" rows="3" placeholder="نکات مهم، پیشنهادات، یا مشاهدات خاص"></textarea>
+
+    <input type="submit" value="ثبت ارزیابی">
+  </section>
 
 </body>
 </html>
