@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ۳۰ – ماتریس مسئولیت‌ها (RACI)</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📄 فرم ۳۰ – ماتریس مسئولیت‌ها (RACI)</h1>
+  <p>
+    این فرم برای تعیین نقش‌ها و مسئولیت‌های افراد یا واحدها در فعالیت‌های کلیدی طراحی شده است.
+    تمامی اطلاعات با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شود.
+  </p>
+
+  <label>عنوان فعالیت یا پروژه:</label>
+  <input type="text" name="activity_title">
+
+  <label>شرح کلی فعالیت:</label>
+  <textarea name="activity_description" rows="3"></textarea>
+
+  <h2>📊 جدول ماتریس RACI</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>وظیفه / فعالیت</th>
+        <th>مسئول (R)</th>
+        <th>پاسخگو (A)</th>
+        <th>مشاور (C)</th>
+        <th>مطلع (I)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="task1"></td>
+        <td><input type="text" name="responsible1"></td>
+        <td><input type="text" name="accountable1"></td>
+        <td><input type="text" name="consulted1"></td>
+        <td><input type="text" name="informed1"></td>
+      </tr>
+      <!-- ردیف‌های بیشتر قابل اضافه شدن هستند -->
+    </tbody>
+  </table>
+
+  <label>توضیحات تکمیلی:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
