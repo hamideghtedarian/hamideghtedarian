@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects Progress Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Projects Progress Dashboard</h1>
+  <p>
+    This dashboard visualizes the progress of improvement projects—showing completion percentage, execution status, and reporting owners.
+    All data is ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <h2>📈 Progress Chart</h2>
+  <canvas id="progressChart" width="400" height="200"></canvas>
+  <script>
+    const ctx = document.getElementById('progressChart').getContext('2d');
+    const progressChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Project A', 'Project B', 'Project C'],
+        datasets: [{
+          label: 'Completion %',
+          data: [80, 45, 60],
+          backgroundColor: ['#4CAF50', '#2196F3', '#FFC107']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Project Completion Overview'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📄 Project Status Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Project Title</th>
+        <th>Completion %</th>
+        <th>Status</th>
+        <th>Report Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Digital Transformation – Steel</td>
+        <td>80%</td>
+        <td>✅ In Progress</td>
+        <td>Excellence Unit</td>
+      </tr>
+      <tr>
+        <td>Mining Structure Redesign</td>
+        <td>45%</td>
+        <td>🟡 Under Review</td>
+        <td>Transformation Team</td>
+      </tr>
+      <tr>
+        <td>EFQM 2025 Assessment</td>
+        <td>60%</td>
+        <td>🟢 Awaiting Approval</td>
+        <td>Evaluation Lead</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
