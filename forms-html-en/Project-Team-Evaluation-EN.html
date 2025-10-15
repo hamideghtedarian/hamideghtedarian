@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Team Evaluation Form</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>👥 Project Team Evaluation Form</h1>
+  <p>
+    This form assesses the performance, collaboration, and learning of project team members.
+    All evaluations are ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <label>Project Title:</label>
+  <input type="text" name="project_title">
+
+  <label>Evaluator Name:</label>
+  <input type="text" name="evaluator">
+
+  <h2>📊 Team Member Evaluation Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Member Name</th>
+        <th>Participation Level</th>
+        <th>Team Collaboration</th>
+        <th>Learning & Growth</th>
+        <th>Overall Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="member1"></td>
+        <td><select><option>Low</option><option>Moderate</option><option>High</option></select></td>
+        <td><select><option>Poor</option><option>Acceptable</option><option>Excellent</option></select></td>
+        <td><select><option>Limited</option><option>Notable</option><option>Significant</option></select></td>
+        <td><input type="number" name="score1" min="0" max="100"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <label>Additional Notes:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
