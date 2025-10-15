@@ -1,413 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form - Excellence Framework</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            padding: 50px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            font-size: 1.1em;
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .emoji {
-            font-size: 1.3em;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        label {
-            display: block;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
-            font-size: 1em;
-        }
-        
-        .required {
-            color: #e74c3c;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1em;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-        
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        
-        .rating-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .rating-option {
-            flex: 1;
-            min-width: 80px;
-        }
-        
-        .rating-option input[type="radio"] {
-            display: none;
-        }
-        
-        .rating-option label {
-            display: block;
-            padding: 12px;
-            text-align: center;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: normal;
-        }
-        
-        .rating-option input[type="radio"]:checked + label {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: #667eea;
-        }
-        
-        .rating-option label:hover {
-            border-color: #667eea;
-            transform: translateY(-2px);
-        }
-        
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .checkbox-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        
-        .checkbox-item label {
-            margin-bottom: 0;
-            cursor: pointer;
-            font-weight: normal;
-        }
-        
-        .button-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        button {
-            flex: 1;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .reset-btn {
-            background: #e0e0e0;
-            color: #666;
-        }
-        
-        .reset-btn:hover {
-            background: #d0d0d0;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        
-        .info-box {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-        
-        .info-box p {
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-            }
-            
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .button-group {
-                flex-direction: column;
-            }
-            
-            .rating-group {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>User Feedback Form</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1><span class="emoji">💬</span> Feedback Form</h1>
-            <p>Your feedback helps us improve the Excellence Framework</p>
-        </div>
-        
-        <div class="info-box">
-            <p><strong>📌 Note:</strong> All fields marked with <span class="required">*</span> are required. Your feedback is valuable and will be reviewed carefully to enhance our framework.</p>
-        </div>
-        
-        <form id="feedbackForm">
-            <!-- Personal Information -->
-            <div class="form-group">
-                <label for="name">Full Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required placeholder="Enter your full name">
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-            </div>
-            
-            <div class="form-group">
-                <label for="organization">Organization/Company</label>
-                <input type="text" id="organization" name="organization" placeholder="Your organization name">
-            </div>
-            
-            <div class="form-group">
-                <label for="role">Your Role</label>
-                <select id="role" name="role">
-                    <option value="">-- Select your role --</option>
-                    <option value="manager">Manager</option>
-                    <option value="consultant">Consultant</option>
-                    <option value="developer">Developer</option>
-                    <option value="researcher">Researcher</option>
-                    <option value="student">Student</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-            <!-- Overall Satisfaction -->
-            <div class="form-group">
-                <label>Overall Satisfaction <span class="required">*</span></label>
-                <div class="rating-group">
-                    <div class="rating-option">
-                        <input type="radio" id="rating5" name="rating" value="5" required>
-                        <label for="rating5">⭐⭐⭐⭐⭐<br>Excellent</label>
-                    </div>
-                    <div class="rating-option">
-                        <input type="radio" id="rating4" name="rating" value="4">
-                        <label for="rating4">⭐⭐⭐⭐<br>Good</label>
-                    </div>
-                    <div class="rating-option">
-                        <input type="radio" id="rating3" name="rating" value="3">
-                        <label for="rating3">⭐⭐⭐<br>Average</label>
-                    </div>
-                    <div class="rating-option">
-                        <input type="radio" id="rating2" name="rating" value="2">
-                        <label for="rating2">⭐⭐<br>Poor</label>
-                    </div>
-                    <div class="rating-option">
-                        <input type="radio" id="rating1" name="rating" value="1">
-                        <label for="rating1">⭐<br>Very Poor</label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Framework Aspects -->
-            <div class="form-group">
-                <label>Which aspects did you find most useful? (Select all that apply)</label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="aspect1" name="aspects" value="efqm_alignment">
-                        <label for="aspect1">EFQM 2025 Alignment</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="aspect2" name="aspects" value="iso_standards">
-                        <label for="aspect2">ISO Standards Integration</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="aspect3" name="aspects" value="sdg_alignment">
-                        <label for="aspect3">SDG Alignment</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="aspect4" name="aspects" value="bilingual">
-                        <label for="aspect4">Bilingual Support</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="aspect5" name="aspects" value="documentation">
-                        <label for="aspect5">Documentation Quality</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="aspect6" name="aspects" value="ease_of_use">
-                        <label for="aspect6">Ease of Use</label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Detailed Feedback -->
-            <div class="form-group">
-                <label for="strengths">What are the strengths of this framework?</label>
-                <textarea id="strengths" name="strengths" placeholder="Tell us what you liked most about the Excellence Framework..."></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="improvements">What could be improved? <span class="required">*</span></label>
-                <textarea id="improvements" name="improvements" required placeholder="Share your suggestions for improvement..."></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="features">What new features would you like to see?</label>
-                <textarea id="features" name="features" placeholder="Suggest new features or functionalities..."></textarea>
-            </div>
-            
-            <!-- Recommendation -->
-            <div class="form-group">
-                <label for="recommend">Would you recommend this framework to others?</label>
-                <select id="recommend" name="recommend">
-                    <option value="">-- Select an option --</option>
-                    <option value="definitely">Definitely Yes</option>
-                    <option value="probably">Probably Yes</option>
-                    <option value="not_sure">Not Sure</option>
-                    <option value="probably_not">Probably Not</option>
-                    <option value="definitely_not">Definitely Not</option>
-                </select>
-            </div>
-            
-            <!-- Additional Comments -->
-            <div class="form-group">
-                <label for="comments">Additional Comments</label>
-                <textarea id="comments" name="comments" placeholder="Any other feedback or comments you'd like to share..."></textarea>
-            </div>
-            
-            <!-- Buttons -->
-            <div class="button-group">
-                <button type="submit" class="submit-btn">Submit Feedback ✉️</button>
-                <button type="reset" class="reset-btn">Clear Form 🔄</button>
-            </div>
-        </form>
-        
-        <div style="text-align: center;">
-            <a href="index.html" class="back-link">← Back to Dashboard</a>
-        </div>
-    </div>
-    
-    <script>
-        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Collect form data
-            const formData = new FormData(this);
-            const data = {};
-            
-            formData.forEach((value, key) => {
-                if (data[key]) {
-                    if (Array.isArray(data[key])) {
-                        data[key].push(value);
-                    } else {
-                        data[key] = [data[key], value];
-                    }
-                } else {
-                    data[key] = value;
-                }
-            });
-            
-            // Display success message
-            alert('✅ Thank you for your feedback!\n\nYour feedback has been recorded successfully. We appreciate your time and input to help improve the Excellence Framework.');
-            
-            // Log to console (in production, this would be sent to a server)
-            console.log('Feedback submitted:', data);
-            
-            // Reset form
-            this.reset();
-        });
-    </script>
+
+  <h1>📨 User Feedback Form</h1>
+  <p>
+    Please share your suggestions, issues, or experience using the forms and dashboards.
+    All feedback is ethically reviewed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <form>
+    <label>Full Name (optional):</label>
+    <input type="text" name="fullname">
+
+    <label>Email (optional):</label>
+    <input type="email" name="email">
+
+    <label>Form or Dashboard:</label>
+    <select name="form_code">
+      <option>Form 20</option>
+      <option>Form 25</option>
+      <option>Form 30</option>
+      <option>Form 35</option>
+      <option>Dashboards</option>
+    </select>
+
+    <label>Feedback Type:</label>
+    <select name="feedback_type">
+      <option>Improvement Suggestion</option>
+      <option>Technical Issue</option>
+      <option>User Experience</option>
+      <option>Other</option>
+    </select>
+
+    <label>Feedback Description:</label>
+    <textarea name="feedback_text" rows="4"></textarea>
+
+    <label>Would you like a response?</label>
+    <select name="reply_preference">
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </form>
+
 </body>
 </html>
