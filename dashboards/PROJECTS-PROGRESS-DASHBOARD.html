@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>داشبورد پیشرفت پروژه‌ها</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 داشبورد پیشرفت پروژه‌ها</h1>
+  <p>
+    این داشبورد وضعیت کلی پروژه‌های بهبود را نمایش می‌دهد—شامل درصد پیشرفت، وضعیت اجرا، و مسئولان گزارش‌دهی.
+    تمامی داده‌ها بر اساس فرم‌های رسمی <strong>عبدالحمید اقتداریان</strong> ثبت شده‌اند.
+  </p>
+
+  <h2>📈 نمودار درصد پیشرفت</h2>
+  <canvas id="progressChart" width="400" height="200"></canvas>
+  <script>
+    const ctx = document.getElementById('progressChart').getContext('2d');
+    const progressChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['پروژه A', 'پروژه B', 'پروژه C'],
+        datasets: [{
+          label: 'درصد پیشرفت',
+          data: [80, 45, 60],
+          backgroundColor: ['#4CAF50', '#2196F3', '#FFC107']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'پیشرفت پروژه‌ها'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📄 جدول وضعیت پروژه‌ها</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>عنوان پروژه</th>
+        <th>درصد پیشرفت</th>
+        <th>وضعیت اجرا</th>
+        <th>مسئول گزارش</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>تحول دیجیتال فولاد</td>
+        <td>۸۰٪</td>
+        <td>✅ در حال اجرا</td>
+        <td>واحد تعالی</td>
+      </tr>
+      <tr>
+        <td>بازطراحی ساختار معدن</td>
+        <td>۴۵٪</td>
+        <td>🟡 در حال بررسی</td>
+        <td>تیم تحول</td>
+      </tr>
+      <tr>
+        <td>ارزیابی EFQM 2025</td>
+        <td>۶۰٪</td>
+        <td>🟢 در انتظار تأیید</td>
+        <td>مدیر ارزیابی</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
