@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم گزارش پیشرفت پروژه</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📋 فرم گزارش پیشرفت پروژه</h1>
+  <p>
+    این فرم برای ثبت وضعیت فعلی، اقدامات انجام‌شده، چالش‌ها، و گام‌های بعدی در پروژه‌های بهبود طراحی شده است.
+    تمامی گزارش‌ها با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شوند.
+  </p>
+
+  <label>عنوان پروژه:</label>
+  <input type="text" name="project_title">
+
+  <label>تاریخ گزارش:</label>
+  <input type="date" name="report_date">
+
+  <label>شرح وضعیت فعلی:</label>
+  <textarea name="current_status" rows="3"></textarea>
+
+  <label>اقدامات انجام‌شده:</label>
+  <textarea name="actions_done" rows="3"></textarea>
+
+  <label>چالش‌ها یا موانع:</label>
+  <textarea name="challenges" rows="3"></textarea>
+
+  <label>گام‌های بعدی:</label>
+  <textarea name="next_steps" rows="3"></textarea>
+
+  <label>مسئول گزارش:</label>
+  <input type="text" name="report_owner">
+
+</body>
+</html>
