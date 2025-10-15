@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>داشبورد فرم‌های جدید</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 داشبورد فرم‌های جدید</h1>
+  <p>
+    این داشبورد وضعیت فرم‌های تخصصی جدید را نمایش می‌دهد—شامل فرم‌های تحلیل ریسک، بلوغ دیجیتال، ماتریس مسئولیت‌ها، و نقشه تحول.
+    تمامی فرم‌ها با برند رسمی <strong>عبدالحمید اقتداریان</strong> طراحی شده‌اند.
+  </p>
+
+  <h2>📄 جدول فرم‌ها</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>کد فرم</th>
+        <th>عنوان</th>
+        <th>موضوع</th>
+        <th>وضعیت</th>
+        <th>لینک</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>فرم ۲۰</td>
+        <td>تحلیل ریسک فرآیندها</td>
+        <td>ریسک</td>
+        <td>✅ منتشر شده</td>
+        <td><a href="../forms-html/Form-20.html">مشاهده</a></td>
+      </tr>
+      <tr>
+        <td>فرم ۲۵</td>
+        <td>ارزیابی بلوغ دیجیتال</td>
+        <td>بلوغ</td>
+        <td>✅ منتشر شده</td>
+        <td><a href="../forms-html/Form-25.html">مشاهده</a></td>
+      </tr>
+      <tr>
+        <td>فرم ۳۰</td>
+        <td>ماتریس مسئولیت‌ها (RACI)</td>
+        <td>نقش‌ها</td>
+        <td>✅ منتشر شده</td>
+        <td><a href="../forms-html/Form-30.html">مشاهده</a></td>
+      </tr>
+      <tr>
+        <td>فرم ۳۵</td>
+        <td>نقشه مسیر تحول</td>
+        <td>تحول</td>
+        <td>✅ منتشر شده</td>
+        <td><a href="../forms-html/Form-35.html">مشاهده</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>📈 نمودار دسته‌بندی فرم‌ها</h2>
+  <canvas id="formChart" width="400" height="200"></canvas>
+  <script>
+    const ctx = document.getElementById('formChart').getContext('2d');
+    const formChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['ریسک', 'بلوغ', 'نقش‌ها', 'تحول'],
+        datasets: [{
+          label: 'تعداد فرم‌ها',
+          data: [1, 1, 1, 1],
+          backgroundColor: ['#FF5722', '#4CAF50', '#2196F3', '#FFC107']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'تقسیم‌بندی موضوعی فرم‌های جدید'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📝 توضیحات</h2>
+  <p>
+    این داشبورد با اضافه شدن فرم‌های جدید به‌روزرسانی خواهد شد. لطفاً پیشنهادات خود را از طریق فرم بازخورد ارسال فرمایید.
+  </p>
+
+</body>
+</html>
