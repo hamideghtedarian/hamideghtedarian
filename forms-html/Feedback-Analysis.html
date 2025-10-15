@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم تحلیل بازخورد کاربران</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📋 فرم تحلیل بازخورد کاربران</h1>
+  <p>
+    این فرم برای ثبت و تحلیل بازخوردهای دریافتی از کاربران طراحی شده است. هدف آن مستندسازی مسیر پاسخ‌گویی و بهبود مستمر است.
+    تمامی تحلیل‌ها با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت می‌شوند.
+  </p>
+
+  <label>تاریخ دریافت بازخورد:</label>
+  <input type="date" name="feedback_date">
+
+  <label>فرم یا داشبورد مربوطه:</label>
+  <select name="related_form">
+    <option>فرم ۲۰</option>
+    <option>فرم ۲۵</option>
+    <option>فرم ۳۰</option>
+    <option>فرم ۳۵</option>
+    <option>داشبوردها</option>
+  </select>
+
+  <label>نوع بازخورد:</label>
+  <select name="feedback_type">
+    <option>پیشنهاد بهبود</option>
+    <option>اشکال فنی</option>
+    <option>تجربه کاربری</option>
+    <option>سایر</option>
+  </select>
+
+  <label>شرح بازخورد دریافتی:</label>
+  <textarea name="feedback_text" rows="3"></textarea>
+
+  <label>اقدام انجام‌شده یا پیشنهادی:</label>
+  <textarea name="action_taken" rows="3"></textarea>
+
+  <label>وضعیت پاسخ‌گویی:</label>
+  <select name="response_status">
+    <option>پاسخ داده شد</option>
+    <option>در حال بررسی</option>
+    <option>نیاز به پیگیری بیشتر</option>
+  </select>
+
+  <label>مسئول تحلیل یا پاسخ‌گویی:</label>
+  <input type="text" name="analyst_name">
+
+</body>
+</html>
