@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم پیشنهاد بهبود داخلی</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <h1>💡 فرم پیشنهاد بهبود داخلی</h1>
+  <p>
+    این فرم برای ثبت ایده‌ها و پیشنهادات بهبود از سوی اعضای تیم داخلی طراحی شده است.
+    تمامی پیشنهادات با برند رسمی <strong>عبدالحمید اقتداریان</strong> ثبت و بررسی می‌شوند.
+  </p>
+
+  <label>نام پیشنهاددهنده:</label>
+  <input type="text" name="name">
+
+  <label>واحد یا تیم مربوطه:</label>
+  <input type="text" name="unit">
+
+  <label>عنوان پیشنهاد:</label>
+  <input type="text" name="title">
+
+  <label>شرح کامل پیشنهاد:</label>
+  <textarea name="description" rows="4"></textarea>
+
+  <label>هدف از پیشنهاد:</label>
+  <select name="goal">
+    <option>افزایش بهره‌وری</option>
+    <option>کاهش هزینه</option>
+    <option>بهبود کیفیت</option>
+    <option>ارتقاء تجربه کاربر</option>
+    <option>سایر</option>
+  </select>
+
+  <label>پیشنهاد قابل اجرا در چه بازه‌ای است؟</label>
+  <select name="timeline">
+    <option>کوتاه‌مدت</option>
+    <option>میان‌مدت</option>
+    <option>بلندمدت</option>
+  </select>
+
+  <label>توضیحات تکمیلی:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
