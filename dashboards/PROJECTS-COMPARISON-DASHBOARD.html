@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>داشبورد مقایسه‌ای پروژه‌ها</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { direction: rtl; font-family: sans-serif; }
+    canvas { margin-top: 30px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 داشبورد مقایسه‌ای پروژه‌ها</h1>
+  <p>
+    این داشبورد پروژه‌های کلیدی را از نظر پیشرفت، تحقق اهداف، و درس‌آموخته‌ها مقایسه می‌کند.
+    تمامی داده‌ها بر اساس فرم‌های رسمی <strong>عبدالحمید اقتداریان</strong> ثبت شده‌اند.
+  </p>
+
+  <h2>📈 مقایسه درصد پیشرفت</h2>
+  <canvas id="progressChart" width="400" height="200"></canvas>
+  <script>
+    const ctx1 = document.getElementById('progressChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['پروژه A', 'پروژه B', 'پروژه C'],
+        datasets: [{
+          label: 'درصد پیشرفت',
+          data: [85, 60, 40],
+          backgroundColor: ['#4CAF50', '#2196F3', '#FFC107']
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'درصد پیشرفت پروژه‌ها'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>🎯 تحقق اهداف پروژه</h2>
+  <canvas id="goalChart" width="400" height="200"></canvas>
+  <script>
+    const ctx2 = document.getElementById('goalChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['محقق شده', 'تا حدی', 'محقق نشده'],
+        datasets: [{
+          label: 'تحقق اهداف',
+          data: [2, 1, 0],
+          backgroundColor: ['#4CAF50', '#FFC107', '#F44336']
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'وضعیت تحقق اهداف در پروژه‌ها'
+          }
+        }
+      }
+    });
+  </script>
+
+  <h2>📄 جدول مقایسه‌ای پروژه‌ها</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>عنوان پروژه</th>
+        <th>درصد پیشرفت</th>
+        <th>تحقق اهداف</th>
+        <th>مهم‌ترین درس‌آموخته</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>تحول دیجیتال فولاد</td>
+        <td>۸۵٪</td>
+        <td>✅ محقق شده</td>
+        <td>اهمیت آموزش تیم در مراحل اولیه</td>
+      </tr>
+      <tr>
+        <td>بازطراحی ساختار معدن</td>
+        <td>۶۰٪</td>
+        <td>🟡 تا حدی</td>
+        <td>نیاز به هماهنگی بین واحدی</td>
+      </tr>
+      <tr>
+        <td>ارزیابی EFQM 2025</td>
+        <td>۴۰٪</td>
+        <td>🔄 در حال اجرا</td>
+        <td>ضرورت تعریف شاخص‌های دقیق از ابتدا</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
