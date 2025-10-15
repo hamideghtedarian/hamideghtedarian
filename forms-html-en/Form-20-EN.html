@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form 20 – Process Risk Analysis</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>📄 Form 20 – Process Risk Analysis</h1>
+  <p>
+    This form is designed to identify, assess, and mitigate potential risks in key processes.
+    All entries are ethically licensed and branded under <strong>Hamideghtedarian</strong>.
+  </p>
+
+  <label>Process Title:</label>
+  <input type="text" name="process_title">
+
+  <label>Process Description:</label>
+  <textarea name="process_description" rows="3"></textarea>
+
+  <h2>📊 Risk Assessment Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Process Step</th>
+        <th>Potential Risk</th>
+        <th>Probability</th>
+        <th>Impact</th>
+        <th>Mitigation Action</th>
+        <th>Responsible Owner</th>
+        <th>Execution Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="step1"></td>
+        <td><input type="text" name="risk1"></td>
+        <td>
+          <select name="probability1">
+            <option>Low</option><option>Medium</option><option>High</option>
+          </select>
+        </td>
+        <td>
+          <select name="impact1">
+            <option>Low</option><option>Medium</option><option>High</option>
+          </select>
+        </td>
+        <td><input type="text" name="action1"></td>
+        <td><input type="text" name="owner1"></td>
+        <td>
+          <select name="status1">
+            <option>Completed</option><option>In Progress</option><option>Not Started</option>
+          </select>
+        </td>
+      </tr>
+      <!-- More rows can be added -->
+    </tbody>
+  </table>
+
+  <label>Additional Notes:</label>
+  <textarea name="notes" rows="3"></textarea>
+
+</body>
+</html>
