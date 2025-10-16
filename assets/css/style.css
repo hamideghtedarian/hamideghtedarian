@@ -1,18 +1,15 @@
+/* ✅ بارگذاری فونت‌های رسمی برای پشتیبانی دو زبانه */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import url('https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css');
 
-body {
-  font-family: 'Inter', 'Vazirmatn', sans-serif;
-}
-
-/* ✅ Base Reset */
+/* ✅ ریست پایه برای کنترل دقیق ابعاد و فاصله‌ها */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ✅ Body Styling */
+/* ✅ تنظیمات عمومی بدنه */
 body {
   font-family: 'Inter', 'Vazirmatn', sans-serif;
   background-color: #f9f9fc;
@@ -20,20 +17,19 @@ body {
   padding: 20px;
   line-height: 1.6;
 }
-<body class="dark-mode">
 
-/* ✅ Headings */
+/* ✅ هدینگ‌ها با رنگ سازمانی */
 h1, h2, h3 {
   margin-bottom: 20px;
   color: #34495e;
 }
 
-/* ✅ Paragraphs */
+/* ✅ پاراگراف‌ها با فاصله مناسب */
 p {
   margin-bottom: 15px;
 }
 
-/* ✅ Labels and Inputs */
+/* ✅ لیبل‌ها و فیلدهای ورودی */
 label {
   display: block;
   margin-top: 15px;
@@ -51,7 +47,7 @@ input, select, textarea {
   background-color: #fff;
 }
 
-/* ✅ Buttons */
+/* ✅ دکمه‌های پیش‌فرض فرم */
 button, input[type="submit"] {
   background-color: #3498db;
   color: white;
@@ -62,12 +58,11 @@ button, input[type="submit"] {
   cursor: pointer;
   font-size: 14px;
 }
-
 button:hover, input[type="submit"]:hover {
   background-color: #2980b9;
 }
 
-/* ✅ Tables */
+/* ✅ طراحی جدول‌ها با سایه ملایم */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -75,38 +70,34 @@ table {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
-
 th, td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: center;
   font-size: 14px;
 }
-
 th {
   background-color: #ecf0f1;
   color: #2c3e50;
 }
 
-/* ✅ Navigation Bar */
+/* ✅ نوار منو بالا با لینک‌های کاربردی */
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
 }
-
 nav ul li a {
   text-decoration: none;
   color: #3498db;
   font-weight: bold;
 }
-
 nav ul li a:hover {
   color: #2980b9;
 }
 
-/* ✅ Cards and Sections */
+/* ✅ کارت‌ها و بخش‌های فرم */
 section, .card {
   background-color: #ffffff;
   padding: 20px;
@@ -115,27 +106,26 @@ section, .card {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* ✅ Responsive Design */
+/* ✅ طراحی واکنش‌گرا برای موبایل */
 @media (max-width: 768px) {
   body {
     padding: 10px;
   }
-
   table, thead, tbody, th, td, tr {
     display: block;
     width: 100%;
   }
-
   th {
     background-color: #f0f0f0;
   }
-
   td {
     border: none;
     border-bottom: 1px solid #eee;
     padding: 10px;
   }
 }
+
+/* ✅ پیام‌های موفقیت و هشدار */
 .message-success {
   background-color: #dff0d8;
   color: #3c763d;
@@ -155,6 +145,8 @@ section, .card {
   font-weight: bold;
   text-align: center;
 }
+
+/* ✅ کلاس‌های رنگی برای دکمه‌ها */
 .btn-primary {
   background-color: #3498db;
   color: white;
@@ -163,18 +155,17 @@ section, .card {
   border-radius: 6px;
   cursor: pointer;
 }
-
 .btn-primary:hover {
   background-color: #2980b9;
 }
-
 .btn-success {
   background-color: #27ae60;
 }
-
 .btn-warning {
   background-color: #f39c12;
 }
+
+/* ✅ حالت تاریک برای فرم‌ها و داشبوردها */
 body.dark-mode {
   background-color: #1e1e2f;
   color: #f0f0f0;
