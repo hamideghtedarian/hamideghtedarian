@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Vazirmatn/Vazirmatn.css');
+
+body {
+  font-family: 'Inter', 'Vazirmatn', sans-serif;
+}
+
 /* ✅ Base Reset */
 * {
   margin: 0;
