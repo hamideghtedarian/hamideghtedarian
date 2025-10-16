@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Transformation Path Form</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <section>
+    <h1>🛤️ Transformation Path Form</h1>
+    <p>This form allows you to document and manage the key stages of your organizational transformation.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>Description</th>
+          <th>Responsible</th>
+          <th>Execution Date</th>
+        </tr>
+      </thead>
+      <tbody id="transformation-steps">
+        <tr>
+          <td><input type="text" placeholder="e.g., Current State Analysis"></td>
+          <td><input type="text" placeholder="Brief description of the stage"></td>
+          <td><input type="text" placeholder="Responsible person"></td>
+          <td><input type="date"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn-primary" onclick="addStep()">➕ Add New Stage</button>
+
+    <input type="submit" value="Submit Information" class="btn-success">
+  </section>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
