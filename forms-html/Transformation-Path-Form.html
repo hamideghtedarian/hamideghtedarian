@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم مسیر تحول</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <section>
+    <h1>🛤️ فرم مسیر تحول</h1>
+    <p>در این فرم می‌توانید مراحل تحول سازمانی را ثبت و مدیریت کنید.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>مرحله</th>
+          <th>توضیح</th>
+          <th>مسئول</th>
+          <th>زمان اجرا</th>
+        </tr>
+      </thead>
+      <tbody id="transformation-steps">
+        <tr>
+          <td><input type="text" placeholder="مثلاً: تحلیل وضعیت موجود"></td>
+          <td><input type="text" placeholder="شرح مختصر مرحله"></td>
+          <td><input type="text" placeholder="نام مسئول"></td>
+          <td><input type="date"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn-primary" onclick="addStep()">➕ افزودن مرحله جدید</button>
+
+    <input type="submit" value="ثبت اطلاعات" class="btn-success">
+  </section>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
