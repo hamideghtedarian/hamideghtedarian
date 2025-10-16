@@ -105,3 +105,54 @@
     });
   });
 </script>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>جدول مسیر تحول</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <section>
+    <h1>🛤️ جدول مسیر تحول پروژه</h1>
+    <p>در این جدول می‌توانید مراحل تحول را به‌صورت پویا ثبت کنید.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>مرحله</th>
+          <th>توضیح</th>
+          <th>مسئول</th>
+          <th>زمان اجرا</th>
+        </tr>
+      </thead>
+      <tbody id="transformation-steps">
+        <tr>
+          <td><input type="text" placeholder="مثلاً: تحلیل وضعیت موجود"></td>
+          <td><input type="text" placeholder="شرح مختصر مرحله"></td>
+          <td><input type="text" placeholder="نام مسئول"></td>
+          <td><input type="date"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn-primary" onclick="addStep()">➕ افزودن مرحله جدید</button>
+  </section>
+
+  <script>
+    function addStep() {
+      const table = document.getElementById("transformation-steps");
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `
+        <td><input type="text" placeholder="مرحله جدید"></td>
+        <td><input type="text" placeholder="شرح مختصر"></td>
+        <td><input type="text" placeholder="نام مسئول"></td>
+        <td><input type="date"></td>
+      `;
+      table.appendChild(newRow);
+    }
+  </script>
+
+</body>
+</html>
