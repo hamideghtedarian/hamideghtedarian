@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم بازخورد کارکنان</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <section>
+    <h1>🧑‍💼 فرم بازخورد کارکنان</h1>
+    <p>لطفاً تجربه کاری خود را با دقت و صداقت ثبت فرمایید. این اطلاعات برای بهبود مستمر و تصمیم‌گیری راهبردی استفاده خواهد شد.</p>
+
+    <!-- اطلاعات پایه -->
+    <label>نام و نام خانوادگی (اختیاری)</label>
+    <input type="text" placeholder="مثلاً: علی رضایی">
+
+    <label>واحد سازمانی</label>
+    <input type="text" placeholder="مثلاً: منابع انسانی">
+
+    <label>سابقه همکاری (سال)</label>
+    <input type="number" min="0" placeholder="مثلاً: 5">
+
+    <!-- رضایت شغلی -->
+    <label>رضایت کلی از محیط کار</label>
+    <select>
+      <option>انتخاب کنید</option>
+      <option>خیلی کم</option>
+      <option>کم</option>
+      <option>متوسط</option>
+      <option>زیاد</option>
+      <option>خیلی زیاد</option>
+    </select>
+
+    <label>تعادل بین کار و زندگی</label>
+    <select>
+      <option>انتخاب کنید</option>
+      <option>خیلی ضعیف</option>
+      <option>ضعیف</option>
+      <option>متوسط</option>
+      <option>خوب</option>
+      <option>عالی</option>
+    </select>
+
+    <!-- تجربه کاری -->
+    <label>نقاط قوت محیط کاری از دید شما</label>
+    <textarea rows="3" placeholder="مثلاً: همکاری تیمی، احترام متقابل، فرصت یادگیری"></textarea>
+
+    <label>چالش‌های موجود در محیط کاری</label>
+    <textarea rows="3" placeholder="مثلاً: فشار کاری بالا، نبود شفافیت در تصمیم‌گیری"></textarea>
+
+    <!-- ارتباطات داخلی -->
+    <label>دسترسی به مدیران و دریافت بازخورد</label>
+    <select>
+      <option>انتخاب کنید</option>
+      <option>خیلی ضعیف</option>
+      <option>ضعیف</option>
+      <option>متوسط</option>
+      <option>خوب</option>
+      <option>عالی</option>
+    </select>
+
+    <!-- توسعه فردی -->
+    <label>فرصت‌های رشد و یادگیری در سازمان</label>
+    <select>
+      <option>انتخاب کنید</option>
+      <option>خیلی کم</option>
+      <option>کم</option>
+      <option>متوسط</option>
+      <option>زیاد</option>
+      <option>خیلی زیاد</option>
+    </select>
+
+    <!-- جمع‌بندی -->
+    <label>پیشنهاد نهایی شما برای بهبود محیط کاری</label>
+    <textarea rows="3" placeholder="مثلاً: برگزاری جلسات بازخورد، بهبود فرآیندها، آموزش مستمر"></textarea>
+
+    <input type="submit" value="ثبت بازخورد" class="btn-success">
+  </section>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
