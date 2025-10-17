@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Stakeholder Forms Analytics Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section>
+    <h1>📊 Stakeholder Forms Analytics Dashboard</h1>
+    <p>This dashboard provides a visual overview of feedback collected from employees, customers, shareholders, and local communities.</p>
+
+    <!-- Participation -->
+    <h2>📥 Participation Overview</h2>
+    <canvas id="participationChart" width="400" height="200"></canvas>
+
+    <!-- Satisfaction -->
+    <h2>📈 Average Satisfaction by Form</h2>
+    <canvas id="satisfactionChart" width="400" height="200"></canvas>
+
+    <!-- Comments -->
+    <h2>🗣️ Sample Comments and Suggestions</h2>
+    <div class="comments-box">
+      <ul>
+        <li>Employees: “We need more clarity on promotion paths.”</li>
+        <li>Customers: “Lab response time should be faster.”</li>
+        <li>Shareholders: “Quarterly financial reports would be appreciated.”</li>
+        <li>Communities: “Local hiring efforts are commendable.”</li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    const participationData = {
+      labels: ['Employees', 'Customers', 'Shareholders', 'Communities'],
+      datasets: [{
+        label: 'Responses',
+        data: [42, 28, 17, 23],
+        backgroundColor: ['#4e79a7', '#f28e2c', '#e15759', '#76b7b2']
+      }]
+    };
+
+    const satisfactionData = {
+      labels: ['Employees', 'Customers', 'Shareholders', 'Communities'],
+      datasets: [{
+        label: 'Average Satisfaction (out of 5)',
+        data: [4.1, 3.7, 4.3, 3.9],
+        backgroundColor: ['#59a14f', '#edc948', '#af7aa1', '#ff9da7']
+      }]
+    };
+
+    new Chart(document.getElementById('participationChart'), {
+      type: 'bar',
+      data: participationData,
+      options: { responsive: true }
+    });
+
+    new Chart(document.getElementById('satisfactionChart'), {
+      type: 'bar',
+      data: satisfactionData,
+      options: { responsive: true }
+    });
+  </script>
+
+</body>
+</html>
