@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Feedback Form</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <section>
+    <h1>🧑‍💼 Employee Feedback Form</h1>
+    <p>Please share your honest feedback about your work experience. Your responses will remain anonymous and will help us improve organizational excellence.</p>
+
+    <!-- Basic Info -->
+    <label>Full Name (Optional)</label>
+    <input type="text" placeholder="e.g., Ali Rezaei">
+
+    <label>Department</label>
+    <input type="text" placeholder="e.g., Human Resources">
+
+    <label>Years of Service</label>
+    <input type="number" min="0" placeholder="e.g., 5">
+
+    <!-- Satisfaction -->
+    <label>Overall job satisfaction</label>
+    <select>
+      <option>Select</option>
+      <option>Very Low</option>
+      <option>Low</option>
+      <option>Moderate</option>
+      <option>High</option>
+      <option>Very High</option>
+    </select>
+
+    <label>Work-life balance</label>
+    <select>
+      <option>Select</option>
+      <option>Very Poor</option>
+      <option>Poor</option>
+      <option>Average</option>
+      <option>Good</option>
+      <option>Excellent</option>
+    </select>
+
+    <!-- Experience -->
+    <label>What are the strengths of your work environment?</label>
+    <textarea rows="3" placeholder="e.g., teamwork, mutual respect, learning opportunities"></textarea>
+
+    <label>What challenges do you face at work?</label>
+    <textarea rows="3" placeholder="e.g., high workload, lack of transparency"></textarea>
+
+    <!-- Communication -->
+    <label>Access to managers and receiving feedback</label>
+    <select>
+      <option>Select</option>
+      <option>Very Poor</option>
+      <option>Poor</option>
+      <option>Average</option>
+      <option>Good</option>
+      <option>Excellent</option>
+    </select>
+
+    <!-- Growth -->
+    <label>Opportunities for learning and development</label>
+    <select>
+      <option>Select</option>
+      <option>Very Low</option>
+      <option>Low</option>
+      <option>Moderate</option>
+      <option>High</option>
+      <option>Very High</option>
+    </select>
+
+    <!-- Suggestions -->
+    <label>Your final suggestions to improve the workplace</label>
+    <textarea rows="3" placeholder="e.g., regular feedback sessions, process improvement, continuous training"></textarea>
+
+    <input type="submit" value="Submit Feedback" class="btn-success">
+  </section>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
