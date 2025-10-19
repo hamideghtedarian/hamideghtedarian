@@ -1,0 +1,38 @@
+[
+  {
+    "group": "Employees",
+    "responses": 42,
+    "averageSatisfaction": 4.1,
+    "comments": [
+      "We need more clarity on promotion paths.",
+      "Work-life balance has improved this year."
+    ]
+  },
+  {
+    "group": "Customers",
+    "responses": 28,
+    "averageSatisfaction": 3.7,
+    "comments": [
+      "Lab response time should be faster.",
+      "Appreciate the transparency in test results."
+    ]
+  },
+  {
+    "group": "Shareholders",
+    "responses": 17,
+    "averageSatisfaction": 4.3,
+    "comments": [
+      "Quarterly reports would be appreciated.",
+      "Dividend policy is well-structured."
+    ]
+  },
+  {
+    "group": "Communities",
+    "responses": 23,
+    "averageSatisfaction": 3.9,
+    "comments": [
+      "Local hiring efforts are commendable.",
+      "More presence in community meetings is needed."
+    ]
+  }
+]
