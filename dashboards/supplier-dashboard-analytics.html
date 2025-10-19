@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>داشبورد تحلیلی تأمین‌کنندگان</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section>
+    <h1>📊 داشبورد تحلیلی بازخورد تأمین‌کنندگان</h1>
+    <p>این داشبورد نمایی کلی از نظرات تأمین‌کنندگان درباره کیفیت همکاری با سازمان را نمایش می‌دهد.</p>
+
+    <h2>📥 تعداد پاسخ‌ها به تفکیک شرکت</h2>
+    <canvas id="responseChart" width="400" height="200"></canvas>
+
+    <h2>📈 میانگین رضایت کلی</h2>
+    <canvas id="satisfactionChart" width="400" height="200"></canvas>
+
+    <h2>📊 مقایسه کیفیت تعامل، شفافیت قرارداد، و زمان‌بندی تحویل</h2>
+    <canvas id="comparisonChart" width="400" height="200"></canvas>
+
+    <h2>🗣️ پیشنهادات تأمین‌کنندگان</h2>
+    <div class="comments-box">
+      <ul></ul>
+    </div>
+  </section>
+
+  <script>
+    fetch('../data/supplier-feedback.json')
+      .then(response => response.json())
+      .then(data => {
+        const companies = data.map(item => item.company);
+        const satisfaction = data.map(item => item.overallSatisfaction);
+
+        // شمارش پاسخ‌ها
+        const responseCounts = companies.reduce((acc, name) => {
+          acc[name] = (acc[name] || 0) + 1;
+          return acc;
+        }, {});
+        const responseLabels = Object.keys(responseCounts);
+        const responseData = Object.values(responseCounts);
+
+        new Chart(document.getElementById('responseChart'), {
+          type: 'bar',
+          data: {
+            labels: responseLabels,
+            datasets: [{
+              label: 'تعداد پاسخ‌ها',
+              data: responseData,
+              backgroundColor: '#4e79a7'
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // رضایت کلی
+        new Chart(document.getElementById('satisfactionChart'), {
+          type: 'bar',
+          data: {
+            labels: companies,
+            datasets: [{
+              label: 'رضایت کلی (از ۵)',
+              data: satisfaction,
+              backgroundColor: '#59a14f'
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // مقایسه سه شاخص
+        const qualities = ['interactionQuality', 'contractClarity', 'deliveryTimeliness'];
+        const qualityMap = { 'Excellent': 5, 'Good': 4, 'Average': 3, 'Poor': 2 };
+        const datasets = qualities.map((key, i) => ({
+          label: {
+            interactionQuality: 'کیفیت تعامل',
+            contractClarity: 'شفافیت قرارداد',
+            deliveryTimeliness: 'زمان‌بندی تحویل'
+          }[key],
+          data: data.map(item => qualityMap[item[key]] || 0),
+          backgroundColor: ['#f28e2c', '#e15759', '#76b7b2'][i]
+        }));
+
+        new Chart(document.getElementById('comparisonChart'), {
+          type: 'bar',
+          data: {
+            labels: companies,
+            datasets: datasets
+          },
+          options: {
+            responsive: true,
+            scales: { x: { stacked: true }, y: { stacked: false, max: 5 } }
+          }
+        });
+
+        // نظرات
+        const commentsBox = document.querySelector('.comments-box ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = `${item.company}: «${item.suggestions}»`;
+          commentsBox.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('خطا در بارگذاری داده‌ها:', error);
+      });
+  </script>
+
+</body>
+</html>
