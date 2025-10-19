@@ -11,7 +11,33 @@
     button { margin-top: 16px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
   </style>
 </head>
-<body>
+<script>
+  const form = document.querySelector('form');
+  const responses = [];
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const data = {
+      company: form.companyName.value,
+      sector: form.sector.value,
+      years: parseInt(form.years.value),
+      interactionQuality: form.interactionQuality.value,
+      contractClarity: form.contractClarity.value,
+      deliveryTimeliness: form.deliveryTimeliness.value,
+      overallSatisfaction: parseFloat(form.overallSatisfaction.value),
+      suggestions: form.suggestions.value
+    };
+
+    responses.push(data);
+    console.log('✅ پاسخ ثبت شد:', data);
+
+    alert('پاسخ شما با موفقیت ثبت شد. متشکریم!');
+    form.reset();
+  });
+</script>
+
+  <body>
 
   <section>
     <h1>📝 فرم بازخورد تأمین‌کنندگان</h1>
