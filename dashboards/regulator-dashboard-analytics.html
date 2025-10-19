@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>داشبورد تحلیلی نهادهای نظارتی</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section>
+    <h1>📊 داشبورد بازخورد نهادهای نظارتی</h1>
+    <p>نمای کلی از تعاملات و ارزیابی نهادهای نظارتی با سازمان</p>
+
+    <h2>📥 تعداد تعاملات با نهادها</h2>
+    <canvas id="interactionChart" width="400" height="200"></canvas>
+
+    <h2>📈 میانگین رضایت کلی</h2>
+    <canvas id="satisfactionChart" width="400" height="200"></canvas>
+
+    <h2>📊 مقایسه وضوح اطلاعات و پاسخگویی</h2>
+    <canvas id="comparisonChart" width="400" height="200"></canvas>
+
+    <h2>🗣️ پیشنهادات نهادهای نظارتی</h2>
+    <div class="comments-box">
+      <ul></ul>
+    </div>
+  </section>
+
+  <script>
+    fetch('../data/regulator-feedback.json')
+      .then(response => response.json())
+      .then(data => {
+        const orgs = data.map(item => item.organization);
+        const interactions = data.map(item => item.interactionCount);
+        const satisfaction = data.map(item => item.overallSatisfaction);
+
+        // نمودار تعاملات
+        new Chart(document.getElementById('interactionChart'), {
+          type: 'bar',
+          data: {
+            labels: orgs,
+            datasets: [{
+              label: 'تعداد تعاملات',
+              data: interactions,
+              backgroundColor: '#4e79a7'
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // نمودار رضایت کلی
+        new Chart(document.getElementById('satisfactionChart'), {
+          type: 'bar',
+          data: {
+            labels: orgs,
+            datasets: [{
+              label: 'رضایت کلی (از ۵)',
+              data: satisfaction,
+              backgroundColor: '#59a14f'
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // نمودار مقایسه‌ای وضوح اطلاعات و پاسخگویی
+        const qualities = ['informationClarity', 'responsiveness'];
+        const qualityMap = { 'Excellent': 5, 'Good': 4, 'Average': 3, 'Poor': 2 };
+        const datasets = qualities.map((key, i) => ({
+          label: { informationClarity: 'وضوح اطلاعات', responsiveness: 'پاسخگویی' }[key],
+          data: data.map(item => qualityMap[item[key]] || 0),
+          backgroundColor: ['#f28e2c', '#e15759'][i]
+        }));
+
+        new Chart(document.getElementById('comparisonChart'), {
+          type: 'bar',
+          data: {
+            labels: orgs,
+            datasets: datasets
+          },
+          options: {
+            responsive: true,
+            scales: { x: { stacked: true }, y: { max: 5 } }
+          }
+        });
+
+        // نمایش پیشنهادات
+        const commentsBox = document.querySelector('.comments-box ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = `${item.organization}: «${item.suggestions}»`;
+          commentsBox.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('خطا در بارگذاری داده‌ها:', error);
+      });
+  </script>
+
+</body>
+</html>
