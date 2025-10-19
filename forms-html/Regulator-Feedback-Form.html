@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم بازخورد نهادهای نظارتی</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    form { max-width: 600px; margin: auto; background: #f9f9f9; padding: 20px; border-radius: 8px; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 16px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h1>📝 فرم بازخورد نهادهای نظارتی</h1>
+    <p>لطفاً نظرات خود را درباره تعاملات سازمان با نهادهای نظارتی ثبت فرمایید.</p>
+
+    <form>
+      <label>نام نهاد</label>
+      <input type="text" name="organizationName" required>
+
+      <label>نوع نظارت</label>
+      <input type="text" name="regulationType">
+
+      <label>تعداد تعاملات در سال گذشته</label>
+      <input type="number" name="interactionCount">
+
+      <label>شفافیت اطلاعات ارائه‌شده</label>
+      <select name="informationClarity">
+        <option value="">انتخاب کنید</option>
+        <option>عالی</option>
+        <option>خوب</option>
+        <option>متوسط</option>
+        <option>ضعیف</option>
+      </select>
+
+      <label>پاسخگویی به درخواست‌ها</label>
+      <select name="responsiveness">
+        <option value="">انتخاب کنید</option>
+        <option>عالی</option>
+        <option>خوب</option>
+        <option>متوسط</option>
+        <option>ضعیف</option>
+      </select>
+
+      <label>پیشنهادات برای بهبود تعاملات نظارتی</label>
+      <textarea name="suggestions" rows="4"></textarea>
+
+      <label>رضایت کلی (از ۵)</label>
+      <input type="number" name="overallSatisfaction" min="1" max="5" step="0.5">
+
+      <button type="submit">ثبت بازخورد</button>
+    </form>
+  </section>
+
+</body>
+</html>
