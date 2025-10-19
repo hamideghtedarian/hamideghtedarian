@@ -1,59 +1,60 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>صفحه اصلی تعالی سازمانی</title>
+  <title>داشبورد مرکزی تحول سازمانی</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .section-box { border: 1px solid #ccc; padding: 16px; margin: 12px 0; border-radius: 8px; background: #f9f9f9; }
+    .section-box h2 { margin-top: 0; }
+    .btn-link { display: inline-block; margin-top: 8px; padding: 6px 12px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+  </style>
 </head>
 <body>
 
-  <h1>🌟 خوش‌آمدید به پایگاه تعالی سازمانی</h1>
-  <p>
-    این وب‌سایت رسمی برای ارائه فرم‌ها، ابزارها، مستندات و تجربیات تعالی سازمانی طراحی شده است.
-    تمامی محتوا با برند رسمی «عبدالحمید اقتداریان» و با رعایت اصول مالکیت فکری منتشر می‌شود.
-  </p>
+  <section>
+    <h1>🌐 داشبورد مرکزی تحول سازمانی</h1>
+    <p>به این صفحه خوش آمدید. در اینجا می‌توانید به تمام فرم‌ها، داشبوردها، پروژه‌ها، راهنماها و داده‌ها دسترسی داشته باشید.</p>
 
-  <h2>🔗 صفحات فارسی</h2>
-  <ul>
-    <li><a href="pages/roadmap.html">نقشه راه تعالی</a></li>
-    <li><a href="pages/projects.html">پروژه‌های بهبود</a></li>
-    <li><a href="pages/tools.html">ابزارها و فرم‌ها</a></li>
-    <li><a href="pages/publications.html">انتشارات تخصصی</a></li>
-    <li><a href="pages/data.html">تحلیل داده‌ها</a></li>
-    <li><a href="pages/contact.html">ارتباط با شما</a></li>
-  </ul>
+    <!-- فرم‌ها -->
+    <div class="section-box">
+      <h2>📝 فرم‌های ذینفعان</h2>
+      <p>فرم‌های جمع‌آوری بازخورد از کارکنان، مشتریان، سهامداران و جوامع محلی</p>
+      <a href="forms-dashboard.html" class="btn-link">مشاهده فرم‌ها</a>
+    </div>
 
-  <h2>🌍 English Pages</h2>
-  <ul>
-    <li><a href="pages-en/roadmap-en.html">Excellence Roadmap</a></li>
-    <li><a href="pages-en/projects-en.html">Improvement Projects</a></li>
-    <li><a href="pages-en/tools-en.html">Tools and Forms</a></li>
-    <li><a href="pages-en/publications-en.html">Publications</a></li>
-    <li><a href="pages-en/data-en.html">Data Analysis</a></li>
-    <li><a href="pages-en/contact-en.html">Contact</a></li>
-  </ul>
+    <!-- داشبوردها -->
+    <div class="section-box">
+      <h2>📊 داشبوردهای تحلیلی</h2>
+      <p>نمای تحلیلی از داده‌های فرم‌ها و پروژه‌ها</p>
+      <a href="dashboards/forms-dashboard-analytics.html" class="btn-link">داشبورد فرم‌ها (فارسی)</a>
+      <a href="dashboards/forms-dashboard-analytics-en.html" class="btn-link">Dashboard (English)</a>
+    </div>
 
-  <h2>📄 مستندات و مجوز</h2>
-  <ul>
-    <li><a href="structure.md">ساختار پروژه</a></li>
-    <li><a href="docs/README-en.md">English README</a></li>
-    <li><a href="LICENSE">مجوز اخلاقی استفاده</a></li>
-  </ul>
+    <!-- پروژه‌ها -->
+    <div class="section-box">
+      <h2>📁 پروژه‌های راهبردی</h2>
+      <p>وضعیت پروژه‌های کلیدی و دسترسی به مستندات مرتبط</p>
+      <a href="dashboards/projects-dashboard.html" class="btn-link">داشبورد پروژه‌ها (فارسی)</a>
+      <a href="dashboards/projects-dashboard-en.html" class="btn-link">Project Dashboard (EN)</a>
+    </div>
+
+    <!-- راهنماها -->
+    <div class="section-box">
+      <h2>📚 راهنماها و مستندات</h2>
+      <p>راهنمای استفاده از فرم‌ها، اسکریپت‌ها، و سبک طراحی</p>
+      <a href="guides/script-guide.html" class="btn-link">راهنمای اسکریپت‌ها</a>
+      <a href="guides/style-guide.html" class="btn-link">راهنمای طراحی</a>
+    </div>
+
+    <!-- داده‌ها -->
+    <div class="section-box">
+      <h2>📂 فایل‌های داده</h2>
+      <p>دسترسی به فایل‌های JSON برای تحلیل و توسعه</p>
+      <a href="data/stakeholder-feedback.json" class="btn-link">داده‌های فرم‌ها</a>
+      <a href="data/projects.json" class="btn-link">داده‌های پروژه‌ها</a>
+    </div>
+  </section>
 
 </body>
 </html>
-
-<a href="pages/roadmap.html">نقشه راه تعالی</a>
-<a href="pages/tools.html">ابزارها و فرم‌ها</a>
-<a href="pages/contact.html">ارتباط با شما</a>
-<a href="pages-en/roadmap-en.html">Excellence Roadmap (EN)</a>
-<a href="pages-en/roadmap-en.html">Excellence Roadmap (EN)</a>
-<a href="pages-en/projects-en.html">Improvement Projects</a>
-<a href="pages-en/tools-en.html">Tools and Forms</a>
-<a href="pages-en/publications-en.html">Publications</a>
-<a href="pages-en/contact-en.html">Contact</a>
-<a href="dashboards/FORMS-DASHBOARD.html">Forms Dashboard</a>
-<a href="dashboards/PROJECTS-DASHBOARD.html">Projects Dashboard</a>
-<a href="dashboards/overview-dashboard.html">داشبورد آماری جامع</a>
-<li><a href="../dashboards/NEW-FORMS-DASHBOARD.html">داشبورد فرم‌های جدید</a></li>
-<li><a href="hub.html">📁 مرکز فرم‌ها و داشبوردها</a></li>
