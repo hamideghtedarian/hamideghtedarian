@@ -11,7 +11,34 @@
     .btn-link { padding: 4px 8px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
   </style>
 </head>
-<body>
+<script>
+  fetch('../data/projects.json')
+    .then(response => response.json())
+    .then(data => {
+      const tbody = document.querySelector('table tbody');
+
+      data.forEach(project => {
+        const tr = document.createElement('tr');
+        tr.className = `status-${project.statusColor}`;
+
+        tr.innerHTML = `
+          <td>${project.title}</td>
+          <td>${project.owner}</td>
+          <td>${project.start}</td>
+          <td>${project.end}</td>
+          <td>${project.status} ${project.status === 'Completed' ? '✅' : project.status === 'Ongoing' ? '⏳' : '🚧'}</td>
+          <td><a href="${project.linkUrl}" class="btn-link">${project.linkText}</a></td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading project data:', error);
+    });
+</script>
+
+  <body>
 
   <section>
     <h1>📁 Strategic Project Dashboard</h1>
