@@ -1,0 +1,20 @@
+[
+  {
+    "organization": "National Safety Council",
+    "regulationType": "Safety Compliance",
+    "interactionCount": 5,
+    "informationClarity": "Good",
+    "responsiveness": "Excellent",
+    "overallSatisfaction": 4.5,
+    "suggestions": "Provide clearer documentation for emergency protocols."
+  },
+  {
+    "organization": "Environmental Authority",
+    "regulationType": "Environmental Monitoring",
+    "interactionCount": 3,
+    "informationClarity": "Average",
+    "responsiveness": "Good",
+    "overallSatisfaction": 3.8,
+    "suggestions": "Consider publishing quarterly environmental impact summaries."
+  }
+]
