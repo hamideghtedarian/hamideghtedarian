@@ -1,0 +1,22 @@
+[
+  {
+    "company": "Pars Steel Co.",
+    "sector": "Steel Components",
+    "years": 3,
+    "interactionQuality": "Good",
+    "contractClarity": "Excellent",
+    "deliveryTimeliness": "Average",
+    "overallSatisfaction": 4.0,
+    "suggestions": "Improve communication during urgent orders."
+  },
+  {
+    "company": "Arak Logistics",
+    "sector": "Transport",
+    "years": 2,
+    "interactionQuality": "Excellent",
+    "contractClarity": "Good",
+    "deliveryTimeliness": "Good",
+    "overallSatisfaction": 4.5,
+    "suggestions": "Consider digital signatures for faster approvals."
+  }
+]
