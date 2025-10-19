@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Stakeholder Forms Analytics Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section>
+    <h1>📊 Stakeholder Forms Analytics Dashboard</h1>
+    <p>This dashboard provides a visual overview of feedback collected from employees, customers, shareholders, and local communities.</p>
+
+    <!-- Participation -->
+    <h2>📥 Participation Overview</h2>
+    <canvas id="participationChart" width="400" height="200"></canvas>
+
+    <!-- Satisfaction -->
+    <h2>📈 Average Satisfaction by Form</h2>
+    <canvas id="satisfactionChart" width="400" height="200"></canvas>
+
+    <!-- Comments -->
+    <h2>🗣️ Sample Comments and Suggestions</h2>
+    <div class="comments-box">
+      <ul></ul>
+    </div>
+  </section>
+
+  <script>
+    fetch('../data/stakeholder-feedback.json')
+      .then(response => response.json())
+      .then(data => {
+        const labels = data.map(item => item.group);
+        const participationCounts = data.map(item => item.responses);
+        const satisfactionAverages = data.map(item => item.averageSatisfaction);
+
+        // Participation Chart
+        new Chart(document.getElementById('participationChart'), {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Responses',
+              data: participationCounts,
+              backgroundColor: ['#4e79a7', '#f28e2c', '#e15759', '#76b7b2']
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // Satisfaction Chart
+        new Chart(document.getElementById('satisfactionChart'), {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Average Satisfaction (out of 5)',
+              data: satisfactionAverages,
+              backgroundColor: ['#59a14f', '#edc948', '#af7aa1', '#ff9da7']
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // Comments
+        const commentsBox = document.querySelector('.comments-box ul');
+        data.forEach(group => {
+          group.comments.forEach(comment => {
+            const li = document.createElement('li');
+            li.textContent = `${group.group}: “${comment}”`;
+            commentsBox.appendChild(li);
+          });
+        });
+      })
+      .catch(error => {
+        console.error('Error loading JSON data:', error);
+      });
+  </script>
+
+</body>
+</html>
