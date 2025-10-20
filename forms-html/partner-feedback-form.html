@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم بازخورد شرکای تجاری و مشاوران</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    form { max-width: 600px; margin: auto; background: #f9f9f9; padding: 20px; border-radius: 8px; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 16px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h1>📝 فرم بازخورد شرکای تجاری و مشاوران</h1>
+    <p>لطفاً نظرات خود را درباره کیفیت همکاری با سازمان ثبت فرمایید.</p>
+
+    <form>
+      <label>نام سازمان یا شریک تجاری</label>
+      <input type="text" name="partnerName" required>
+
+      <label>نوع همکاری</label>
+      <select name="collaborationType">
+        <option value="">انتخاب کنید</option>
+        <option>مشاوره تخصصی</option>
+        <option>تأمین خدمات یا کالا</option>
+        <option>سرمایه‌گذاری مشترک</option>
+        <option>پروژه مشترک</option>
+        <option>سایر</option>
+      </select>
+
+      <label>مدت زمان همکاری (سال)</label>
+      <input type="number" name="collaborationYears" min="0">
+
+      <label>میزان تعهد و پاسخگویی</label>
+      <select name="commitmentLevel">
+        <option value="">انتخاب کنید</option>
+        <option>عالی</option>
+        <option>خوب</option>
+        <option>متوسط</option>
+        <option>ضعیف</option>
+      </select>
+
+      <label>شفافیت در توافقات و قراردادها</label>
+      <select name="contractClarity">
+        <option value="">انتخاب کنید</option>
+        <option>عالی</option>
+        <option>خوب</option>
+        <option>متوسط</option>
+        <option>ضعیف</option>
+      </select>
+
+      <label>رضایت کلی (از ۵)</label>
+      <input type="number" name="overallSatisfaction" min="1" max="5" step="0.5">
+
+      <label>پیشنهادات برای بهبود همکاری</label>
+      <textarea name="suggestions" rows="4"></textarea>
+
+      <button type="submit">ثبت بازخورد</button>
+    </form>
+  </section>
+
+</body>
+</html>
