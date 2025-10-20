@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Partner & Consultant Feedback Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section>
+    <h1>📊 Partner & Consultant Feedback Dashboard</h1>
+    <p>Overview of collaboration quality and suggestions from external partners and consultants.</p>
+
+    <h2>📆 Collaboration Duration (Years)</h2>
+    <canvas id="durationChart" width="400" height="200"></canvas>
+
+    <h2>⭐ Overall Satisfaction</h2>
+    <canvas id="satisfactionChart" width="400" height="200"></canvas>
+
+    <h2>📊 Commitment vs. Contract Clarity</h2>
+    <canvas id="comparisonChart" width="400" height="200"></canvas>
+
+    <h2>💬 Suggestions for Improvement</h2>
+    <div class="comments-box">
+      <ul></ul>
+    </div>
+  </section>
+
+  <script>
+    fetch('../data/partner-feedback.json')
+      .then(response => response.json())
+      .then(data => {
+        const orgs = data.map(item => item.organization);
+        const durations = data.map(item => item.collaborationYears);
+        const satisfaction = data.map(item => item.overallSatisfaction);
+
+        // Duration chart
+        new Chart(document.getElementById('durationChart'), {
+          type: 'bar',
+          data: {
+            labels: orgs,
+            datasets: [{
+              label: 'Years of Collaboration',
+              data: durations,
+              backgroundColor: '#4e79a7'
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // Satisfaction chart
+        new Chart(document.getElementById('satisfactionChart'), {
+          type: 'bar',
+          data: {
+            labels: orgs,
+            datasets: [{
+              label: 'Overall Satisfaction (out of 5)',
+              data: satisfaction,
+              backgroundColor: '#59a14f'
+            }]
+          },
+          options: { responsive: true }
+        });
+
+        // Commitment vs. Contract Clarity
+        const qualities = ['commitmentLevel', 'contractClarity'];
+        const qualityMap = { 'Excellent': 5, 'Good': 4, 'Average': 3, 'Poor': 2 };
+        const datasets = qualities.map((key, i) => ({
+          label: { commitmentLevel: 'Commitment', contractClarity: 'Contract Clarity' }[key],
+          data: data.map(item => qualityMap[item[key]] || 0),
+          backgroundColor: ['#f28e2c', '#e15759'][i]
+        }));
+
+        new Chart(document.getElementById('comparisonChart'), {
+          type: 'bar',
+          data: {
+            labels: orgs,
+            datasets: datasets
+          },
+          options: {
+            responsive: true,
+            scales: { x: { stacked: true }, y: { max: 5 } }
+          }
+        });
+
+        // Suggestions
+        const commentsBox = document.querySelector('.comments-box ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = `${item.organization}: “${item.suggestions}”`;
+          commentsBox.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading data:', error);
+      });
+  </script>
+
+</body>
+</html>
