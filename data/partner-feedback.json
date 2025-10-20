@@ -1,0 +1,20 @@
+[
+  {
+    "organization": "Global Mining Advisors",
+    "collaborationType": "Consulting Services",
+    "collaborationYears": 4,
+    "commitmentLevel": "Excellent",
+    "contractClarity": "Good",
+    "overallSatisfaction": 4.7,
+    "suggestions": "Improve response time during project escalations."
+  },
+  {
+    "organization": "SteelTech Partners",
+    "collaborationType": "Joint Project",
+    "collaborationYears": 2,
+    "commitmentLevel": "Good",
+    "contractClarity": "Average",
+    "overallSatisfaction": 4.2,
+    "suggestions": "Consider more transparent cost breakdowns in future contracts."
+  }
+]
