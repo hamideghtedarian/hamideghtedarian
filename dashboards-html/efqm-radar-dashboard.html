@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>داشبورد تحلیلی EFQM</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
+    section { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+    h1, h2 { color: #007bff; }
+    .box { margin-top: 20px; padding: 15px; background: #eef; border-radius: 6px; }
+    .label { font-weight: bold; margin-top: 10px; }
+    .value { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1>📊 داشبورد تحلیلی EFQM بر اساس RADAR</h1>
+
+  <div class="box">
+    <h2>🔹 اطلاعات پایه ارزیابی</h2>
+    <div class="label">نام سازمان:</div><div class="value" id="org"></div>
+    <div class="label">نام ارزیاب:</div><div class="value" id="eval"></div>
+    <div class="label">تاریخ ارزیابی:</div><div class="value" id="date"></div>
+    <div class="label">معیار:</div><div class="value" id="criterion"></div>
+    <div class="label">زیرمعیار:</div><div class="value" id="subcriterion"></div>
+  </div>
+
+  <div class="box">
+    <h2>📊 امتیاز عددی و سطح شواهد</h2>
+    <div class="label">امتیاز:</div><div class="value" id="score"></div>
+  </div>
+
+  <div class="box">
+    <h2>🧠 منطق RADAR</h2>
+    <div class="label">🎯 نتایج مورد انتظار:</div><div class="value" id="results"></div>
+    <div class="label">🧠 رویکرد:</div><div class="value" id="approach"></div>
+    <div class="label">🚀 استقرار:</div><div class="value" id="deployment"></div>
+    <div class="label">🔍 ارزیابی و بهبود:</div><div class="value" id="refinement"></div>
+  </div>
+
+  <div class="box">
+    <h2>✅ نقاط قوت و فرصت‌های بهبود</h2>
+    <div class="label">نقاط قوت:</div><div class="value" id="strengths"></div>
+    <div class="label">فرصت‌های بهبود:</div><div class="value" id="improvements"></div>
+  </div>
+</section>
+
+<script src="radar-data-loader.js"></script>
+
+</body>
+</html>
