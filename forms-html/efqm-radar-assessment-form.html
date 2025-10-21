@@ -81,6 +81,34 @@
 
   <button type="submit">ثبت ارزیابی</button>
 </section>
+<button onclick="saveAssessment()">ذخیره ارزیابی</button>
+<script>
+function saveAssessment() {
+  const data = {
+    organization: document.querySelector('[name="organization"]').value,
+    evaluator: document.querySelector('[name="evaluator"]').value,
+    date: document.querySelector('[name="date"]').value,
+    criterion: document.querySelector('[name="criterion"]').value,
+    subcriterion: document.querySelector('[name="subcriterion"]').value,
+    question: document.querySelector('[name="question"]').value,
+    response: document.querySelector('[name="response"]').value,
+    radar: {
+      results: document.querySelector('[name="radar_results"]').value,
+      approach: document.querySelector('[name="radar_approach"]').value,
+      deployment: document.querySelector('[name="radar_deployment"]').value,
+      refinement: document.querySelector('[name="radar_refinement"]').value
+    },
+    analysis: {
+      strengths: document.querySelector('[name="strengths"]').value,
+      improvements: document.querySelector('[name="improvements"]').value,
+      score: parseInt(document.querySelector('[name="radar_score"]').value)
+    }
+  };
+
+  console.log("ارزیابی ذخیره شد:", data);
+  alert("✅ ارزیابی با موفقیت ذخیره شد (در کنسول مرورگر قابل مشاهده است)");
+}
+</script>
 
 </body>
 </html>
