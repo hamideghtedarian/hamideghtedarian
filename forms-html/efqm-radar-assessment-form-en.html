@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EFQM RADAR Self-Assessment Form</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
+    section { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+    h1, h2 { color: #007bff; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    select, textarea, input { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 24px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1>📋 EFQM RADAR Self-Assessment Form</h1>
+  <p>Please complete the following fields for each subcriterion.</p>
+
+  <label>Organization Name</label>
+  <input type="text" name="organization">
+
+  <label>Evaluator Name</label>
+  <input type="text" name="evaluator">
+
+  <label>Assessment Date</label>
+  <input type="date" name="date">
+
+  <label>Criterion</label>
+  <select name="criterion">
+    <option>Leadership & Productivity Culture</option>
+    <option>Strategy & Productivity Roadmap</option>
+    <option>People</option>
+    <option>Resources & Capabilities</option>
+    <option>Sustainable Value Creation</option>
+    <option>Stakeholder Perception Results</option>
+    <option>Performance Results</option>
+    <option>Financial & Productivity Outcomes</option>
+  </select>
+
+  <label>Subcriterion</label>
+  <input type="text" name="subcriterion">
+
+  <label>Assessment Question</label>
+  <textarea name="question" rows="2"></textarea>
+
+  <label>Organization Response</label>
+  <textarea name="response" rows="3"></textarea>
+
+  <h2>📊 RADAR Logic</h2>
+
+  <label>Expected Results</label>
+  <textarea name="radar_results" rows="2"></textarea>
+
+  <label>Approach</label>
+  <textarea name="radar_approach" rows="2"></textarea>
+
+  <label>Deployment</label>
+  <textarea name="radar_deployment" rows="2"></textarea>
+
+  <label>Assessment & Refinement</label>
+  <textarea name="radar_refinement" rows="2"></textarea>
+
+  <h2>✅ Final Analysis</h2>
+
+  <label>Strengths</label>
+  <textarea name="strengths" rows="2"></textarea>
+
+  <label>Improvement Opportunities</label>
+  <textarea name="improvements" rows="2"></textarea>
+
+  <label>RADAR Score (0–100)</label>
+  <select name="radar_score">
+    <option value="0">❌ No Evidence (0–10)</option>
+    <option value="15">⚠️ Limited Evidence (15–35)</option>
+    <option value="40">✅ Good Evidence (40–60)</option>
+    <option value="65">🌟 Complete Evidence (65–85)</option>
+    <option value="90">🏆 Excellent Evidence (90–100)</option>
+  </select>
+
+  <button onclick="saveAssessment()">Save Assessment</button>
+</section>
+
+<script src="../dashboards-html/radar-data-loader.js"></script>
+
+</body>
+</html>
