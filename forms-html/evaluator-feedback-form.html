@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم بازخورد ارزیاب تعالی</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
+    section { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+    h1, h2 { color: #007bff; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    select, textarea, input { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 24px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1>🗣️ فرم بازخورد ارزیاب تعالی</h1>
+  <p>لطفاً نظرات خود را درباره فرآیند ارزیابی ثبت فرمایید.</p>
+
+  <label>نام ارزیاب</label>
+  <input type="text" name="evaluator">
+
+  <label>نام سازمان ارزیابی‌شده</label>
+  <input type="text" name="organization">
+
+  <label>تاریخ ارزیابی</label>
+  <input type="date" name="date">
+
+  <label>میزان همکاری سازمان در فرآیند ارزیابی</label>
+  <select name="cooperation">
+    <option>ضعیف</option>
+    <option>متوسط</option>
+    <option>خوب</option>
+    <option>عالی</option>
+  </select>
+
+  <label>وضوح و کیفیت مستندات ارائه‌شده</label>
+  <select name="documentation">
+    <option>نامشخص</option>
+    <option>قابل قبول</option>
+    <option>شفاف و ساختاریافته</option>
+    <option>بسیار حرفه‌ای</option>
+  </select>
+
+  <label>نقاط قوت فرآیند ارزیابی</label>
+  <textarea name="strengths" rows="2"></textarea>
+
+  <label>پیشنهادات برای بهبود فرآیند ارزیابی</label>
+  <textarea name="suggestions" rows="2"></textarea>
+
+  <label>امتیاز کلی به تجربه ارزیابی (از 1 تا 5)</label>
+  <select name="overall_score">
+    <option value="1">۱</option>
+    <option value="2">۲</option>
+    <option value="3">۳</option>
+    <option value="4">۴</option>
+    <option value="5">۵</option>
+  </select>
+
+  <button onclick="saveFeedback()">ذخیره بازخورد</button>
+</section>
+
+<script>
+function saveFeedback() {
+  const feedback = {
+    evaluator: document.querySelector('[name="evaluator"]').value,
+    organization: document.querySelector('[name="organization"]').value,
+    date: document.querySelector('[name="date"]').value,
+    cooperation: document.querySelector('[name="cooperation"]').value,
+    documentation: document.querySelector('[name="documentation"]').value,
+    strengths: document.querySelector('[name="strengths"]').value,
+    suggestions: document.querySelector('[name="suggestions"]').value,
+    overall_score: parseInt(document.querySelector('[name="overall_score"]').value)
+  };
+
+  console.log("بازخورد ثبت شد:", feedback);
+  alert("✅ بازخورد با موفقیت ثبت شد (در کنسول مرورگر قابل مشاهده است)");
+}
+</script>
+
+</body>
+</html>
