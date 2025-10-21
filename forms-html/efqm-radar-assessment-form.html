@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ارزیابی EFQM بر اساس RADAR</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
+    section { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+    h1, h2 { color: #007bff; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    select, textarea { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 24px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1>📝 فرم ارزیابی EFQM بر اساس منطق RADAR</h1>
+  <p>لطفاً اطلاعات مربوط به هر زیرمعیار را تکمیل فرمایید.</p>
+
+  <label>🎯 معیار</label>
+  <select name="criterion">
+    <option>رهبری و فرهنگ بهره‌وری</option>
+    <option>استراتژی و نقشه راه بهره‌وری</option>
+    <option>کارکنان</option>
+    <option>منابع و قابلیت‌ها</option>
+    <option>ارزش‌آفرینی پایدار</option>
+    <option>نتایج ادراکی ذی‌نفعان</option>
+    <option>نتایج عملکردی</option>
+    <option>دستاوردهای مالی و بهره‌وری</option>
+  </select>
+
+  <label>🔹 زیرمعیار</label>
+  <input type="text" name="subcriterion">
+
+  <label>❓ سوال ارزیابی</label>
+  <textarea name="question" rows="2"></textarea>
+
+  <label>📝 پاسخ سازمان</label>
+  <textarea name="response" rows="3"></textarea>
+
+  <h2>📊 ارزیابی بر اساس منطق RADAR</h2>
+
+  <label>🎯 نتایج مورد انتظار</label>
+  <textarea name="radar_results" rows="2"></textarea>
+
+  <label>🧠 رویکرد</label>
+  <textarea name="radar_approach" rows="2"></textarea>
+
+  <label>🚀 استقرار</label>
+  <textarea name="radar_deployment" rows="2"></textarea>
+
+  <label>🔍 ارزیابی و بهبود</label>
+  <textarea name="radar_refinement" rows="2"></textarea>
+
+  <h2>✅ تحلیل نهایی</h2>
+
+  <label>نقاط قوت</label>
+  <textarea name="strengths" rows="2"></textarea>
+
+  <label>فرصت‌های بهبود</label>
+  <textarea name="improvements" rows="2"></textarea>
+
+  <label>🔢 امتیاز عددی بر اساس سطح شواهد</label>
+  <select name="radar_score">
+    <option value="0">❌ عدم شواهد (0–10)</option>
+    <option value="15">⚠️ شواهد محدود (15–35)</option>
+    <option value="40">✅ شواهد خوب (40–60)</option>
+    <option value="65">🌟 شواهد کامل (65–85)</option>
+    <option value="90">🏆 شواهد عالی (90–100)</option>
+  </select>
+
+  <button type="submit">ثبت ارزیابی</button>
+</section>
+
+</body>
+</html>
