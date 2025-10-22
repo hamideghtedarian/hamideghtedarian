@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>داشبورد تحلیلی EFQM</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
     section { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
@@ -17,6 +18,15 @@
 
 <section>
   <h1>📊 داشبورد تحلیلی EFQM بر اساس RADAR</h1>
+<div class="box">
+  <h2>📊 نمودار امتیاز زیرمعیار</h2>
+  <canvas id="scoreChart" width="400" height="200"></canvas>
+</div>
+
+<div class="box">
+  <h2>📊 نمودار توزیع سطح شواهد RADAR</h2>
+  <canvas id="radarChart" width="400" height="200"></canvas>
+</div>
 
   <div class="box">
     <h2>🔹 اطلاعات پایه ارزیابی</h2>
