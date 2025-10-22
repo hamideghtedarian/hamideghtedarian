@@ -15,7 +15,7 @@ fetch('../data/radar-assessment.json')
     document.getElementById("strengths").textContent = data.analysis.strengths;
     document.getElementById("improvements").textContent = data.analysis.improvements;
 
-    // رسم نمودار امتیاز زیرمعیار
+    // نمودار امتیاز زیرمعیار
     const scoreCanvas = document.getElementById("scoreChart");
     if (scoreCanvas) {
       const scoreCtx = scoreCanvas.getContext("2d");
@@ -41,7 +41,7 @@ fetch('../data/radar-assessment.json')
       });
     }
 
-    // رسم نمودار توزیع سطح شواهد
+    // نمودار توزیع سطح شواهد
     const radarCanvas = document.getElementById("radarChart");
     if (radarCanvas) {
       const radarCtx = radarCanvas.getContext("2d");
@@ -65,34 +65,26 @@ fetch('../data/radar-assessment.json')
         }
       });
     }
-  })
-  .catch(error => {
-    console.error("❌ خطا در بارگذاری داده‌ها:", error);
-  });
-// نمودار راداری EFQM
-const radarEFQMCanvas = document.getElementById("radarEFQMChart");
-if (radarEFQMCanvas && data.scores) {
-  const radarEFQMContext = radarEFQMCanvas.getContext("2d");
-  new Chart(radarEFQMContext, {
-    type: "radar",
-    data: {
-      labels: Object.keys(data.scores),
-      datasets: [{
-        label: "EFQM Criteria Scores",
-        data: Object.values(data.scores),
-        backgroundColor: "rgba(0, 123, 255, 0.2)",
-        borderColor: "#007bff",
-        pointBackgroundColor: "#007bff"
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        r: {
-          beginAtZero: true,
-          max: 100
-        }
-      }
-    }
-  });
-}
+
+    // نمودار راداری EFQM
+    const radarEFQMCanvas = document.getElementById("radarEFQMChart");
+    if (radarEFQMCanvas && data.scores) {
+      const radarEFQMContext = radarEFQMCanvas.getContext("2d");
+      new Chart(radarEFQMContext, {
+        type: "radar",
+        data: {
+          labels: Object.keys(data.scores),
+          datasets: [{
+            label: "EFQM Criteria Scores",
+            data: Object.values(data.scores),
+            backgroundColor: "rgba(0, 123, 255, 0.2)",
+            borderColor: "#007bff",
+            pointBackgroundColor: "#007bff"
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            r: {
+              beginAtZero: true,
+              max: 100
