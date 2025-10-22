@@ -16,50 +16,56 @@ fetch('../data/radar-assessment.json')
     document.getElementById("improvements").textContent = data.analysis.improvements;
 
     // رسم نمودار امتیاز زیرمعیار
-    const scoreCtx = document.getElementById("scoreChart").getContext("2d");
-    new Chart(scoreCtx, {
-      type: "bar",
-      data: {
-        labels: ["RADAR Score"],
-        datasets: [{
-          label: "Score",
-          data: [data.analysis.score],
-          backgroundColor: "#007bff"
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100
+    const scoreCanvas = document.getElementById("scoreChart");
+    if (scoreCanvas) {
+      const scoreCtx = scoreCanvas.getContext("2d");
+      new Chart(scoreCtx, {
+        type: "bar",
+        data: {
+          labels: ["RADAR Score"],
+          datasets: [{
+            label: "Score",
+            data: [data.analysis.score],
+            backgroundColor: "#007bff"
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100
+            }
           }
         }
-      }
-    });
+      });
+    }
 
     // رسم نمودار توزیع سطح شواهد
-    const radarCtx = document.getElementById("radarChart").getContext("2d");
-    new Chart(radarCtx, {
-      type: "doughnut",
-      data: {
-        labels: ["Results", "Approach", "Deployment", "Refinement"],
-        datasets: [{
-          label: "RADAR Components",
-          data: [
-            data.radar.results.length,
-            data.radar.approach.length,
-            data.radar.deployment.length,
-            data.radar.refinement.length
-          ],
-          backgroundColor: ["#28a745", "#ffc107", "#17a2b8", "#dc3545"]
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
+    const radarCanvas = document.getElementById("radarChart");
+    if (radarCanvas) {
+      const radarCtx = radarCanvas.getContext("2d");
+      new Chart(radarCtx, {
+        type: "doughnut",
+        data: {
+          labels: ["Results", "Approach", "Deployment", "Refinement"],
+          datasets: [{
+            label: "RADAR Components",
+            data: [
+              data.radar.results.length,
+              data.radar.approach.length,
+              data.radar.deployment.length,
+              data.radar.refinement.length
+            ],
+            backgroundColor: ["#28a745", "#ffc107", "#17a2b8", "#dc3545"]
+          }]
+        },
+        options: {
+          responsive: true
+        }
+      });
+    }
   })
   .catch(error => {
-    console.error("خطا در بارگذاری داده‌ها:", error);
+    console.error("❌ خطا در بارگذاری داده‌ها:", error);
   });
