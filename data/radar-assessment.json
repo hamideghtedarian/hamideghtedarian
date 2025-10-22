@@ -15,16 +15,16 @@
   "analysis": {
     "strengths": "رهبری شفاف و ارتباط مؤثر",
     "improvements": "افزایش آموزش مدیران میانی",
-   "scores": {
-  "Leadership": 70,
-  "Strategy": 80,
-  "People": 65,
-  "Resources": 75,
-  "ValueCreation": 85,
-  "StakeholderResults": 60,
-  "PerformanceResults": 78,
-  "FinancialOutcomes": 72
-}
-
+    "score": 75
+  },
+  "scores": {
+    "Leadership": 70,
+    "Strategy": 80,
+    "People": 65,
+    "Resources": 75,
+    "ValueCreation": 85,
+    "StakeholderResults": 60,
+    "PerformanceResults": 78,
+    "FinancialOutcomes": 72
   }
 }
